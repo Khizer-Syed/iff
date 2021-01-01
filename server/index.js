@@ -1,13 +1,13 @@
-import express from 'express';
-import * as path from 'path';
-import { json } from 'body-parser';
+const express = require('express');
+const path = require('path')
+const bodyParser = require('body-parser')
 
 const port = process.env.PORT || 3000;
 
 const app = express();
-app.use(json());
+app.use(bodyParser.json());
 
-const publicPath = path.join(__dirname, '..', '..', '..', 'build');
+const publicPath = path.join(__dirname, '..', 'build');
 
 app.use(express.static(publicPath));
 

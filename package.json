@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "type": "commonjs",
   "scripts": {
-    "start": "tsc && && node dist/out-tsc/server/index.js",
+    "start": "node server/index.js",
     "client": "ng serve",
     "build": "ng build --prod --aot --output-path build",
     "postinstall": "npm run build",
