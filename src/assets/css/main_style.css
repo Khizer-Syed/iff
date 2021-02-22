@@ -1279,11 +1279,7 @@ footer > [class*="container"] {padding-top: 80px; padding-bottom: 40px;}
 }
 
 
-/* Logo in the header */
-.menu_main_wrap .logo {
-    margin-bottom: 46px;
-    margin-top: 54px;
-}
+
 .menu_main_wrap .logo {
    float:left;
    width:20%;
@@ -1292,11 +1288,11 @@ footer > [class*="container"] {padding-top: 80px; padding-bottom: 40px;}
    display:none;
 }
 .menu_main_wrap .logo_main {
-   width:auto;
+    width:100%;
     display: block;
     float: left;
-    max-height: 100px;
-    height: 54px;
+    max-height: 160px;
+    height: 100%;
     vertical-align: top;
 }
 .menu_main_wrap .logo a {

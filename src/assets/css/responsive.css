@@ -56,7 +56,7 @@ Apple iPod Touch (5th generation)
 	.sidebar_show .content { width: 660px; }
 	.sidebar { 				 width: 220px; }
     .sidebar aside { padding: 25px 5px 0 20px; }
-	
+
 	/* Fullwide or Fullscreen with sidebar */
 	.body_style_fullwide.sidebar_right .content, .body_style_fullscreen.sidebar_right .content { padding-right: 300px; }
 	.body_style_fullwide.sidebar_right .sidebar, .body_style_fullscreen.sidebar_right .sidebar { margin-left: -250px; }
@@ -150,6 +150,7 @@ Apple iPod Touch (5th generation)
     }
     .menu_main_wrap .logo {
         width: 25%;
+        height: 160px;
     }
     .menu_main_wrap .menu_main {
         width: 75%;
@@ -568,8 +569,13 @@ Samsung Galaxy
 
     /* Header */
     .menu_main_wrap .logo {
-        width: 50%;
+        width: 25%;
+        margin-top: 15px;
     }
+
+  .menu_main_wrap .logo a img {
+    height: 120px;
+  }
     .menu_main_wrap .menu_main {
         margin: 35px 0 30px;
         width: 50%;
@@ -577,10 +583,10 @@ Samsung Galaxy
 
     .top_panel_opacity_solid .menu_main_wrap .menu_main {margin: 0;}
 
-    .menu_main_wrap .logo {
-        margin-bottom: 26px;
-        margin-top: 34px;
-    }
+    /*.menu_main_wrap .logo {*/
+    /*    margin-bottom: 26px;*/
+    /*    margin-top: 34px;*/
+    /*}*/
     .menu_user_wrap { font-size: 12px; min-height: 30px; }
     .menu_user_wrap .menu_user_nav > li,
     .menu_user_wrap .menu_user_contact_area {
@@ -804,10 +810,10 @@ Samsung Galaxy
     .breadcrumbs .breadcrumbs_delimiter { margin: 0 4px 0 5px; }
 
     .timeline_section .sc_section_content .subtitle_container+.sc_title_regular {margin-top: 80px;}
-    
+
     .testimonals_section .subtitle_container+.sc_title_regular {margin-top: 80px;margin-bottom: 35px;}
     .testimonals_section .sc_content > .subtitle_container + .sc_title_regular + .sc_testimonials {margin-bottom: 110px;}
-    
+
     .news_section .subtitle_container {/*margin-top: 35px;*/margin-bottom: 20px;}
     .news_section .sc_title_regular {margin-top: 0; margin-bottom: 30px;}
 
@@ -872,7 +878,7 @@ Samsung Galaxy
     h3 { font-size:20px; line-height: 24px; }
     h4 { font-size:18px; line-height: 22px; }
     h5 { font-size:16px; line-height: 19px; }
-    h6 { font-size:15px; line-height: 18px; }    
+    h6 { font-size:15px; line-height: 18px; }
 	/* Body sizes */
     .page_content_wrap { padding: 40px 0; }
 
@@ -898,10 +904,9 @@ Samsung Galaxy
     /* Header */
     .top_panel_image_header { max-width: 90%; width: 90%; }
     .top_panel_image { height: 340px; }
-    .menu_main_wrap .logo { width: 50%; }
+    .menu_main_wrap .logo { width: 20%; }
     .menu_main_wrap .logo {
-        margin-bottom: 26px;
-        margin-top: 34px;
+        margin-top: 10px;
     }
     .menu_main_wrap .menu_main {
         margin: 35px 0 30px;
@@ -1162,7 +1167,7 @@ Samsung Galaxy
         margin-bottom: 0;
     }
 	.reviews_block {
-		width:100%; 
+		width:100%;
 	}
     .widget_area .reviews_block {
         margin-top: 0;
@@ -1443,7 +1448,7 @@ Very common low res
     h4 { font-size:16px; line-height: 20px; letter-spacing:-0.5px; }
     h5 { font-size:15px; line-height: 18px; letter-spacing:-0.5px; }
     h6 { font-size:14px; line-height: 16px; letter-spacing:-0.5px; }
-    
+
     .row + .row {margin-top: 30px;}
     [class*="col-"] + [class*="col-"] {margin-top: 30px;}
     [class*="col-"] > [class*="col-"] {padding-left: 0; padding-right: 0;}
@@ -1488,15 +1493,16 @@ Very common low res
 
     /* Header */
     .responsive_menu .menu_main_wrap { text-align: center; }
-    .menu_main_wrap .logo {width: 100%; float: none; display: inline-block; text-align: center; margin: 35px auto 10px; }
-    .menu_main_wrap .menu_main { float: left; margin: 0 0 16px; text-align: center; width: 100%; position: relative;}
+    /*.menu_main_wrap .logo {width: 100%; float: none; display: inline-block; text-align: center; margin: 35px auto 10px; }*/
+    /*.menu_main_wrap .menu_main { float: left; margin: 0 0 16px; text-align: center; width: 100%; position: relative;}*/
+    .menu_main_wrap .menu_main { margin: 0;}
 
     .menu_main_wrap .search_wrap { float: none; vertical-align: top; }
     /*.responsive_menu .menu_main_responsive_button { display: inline-block; float: none; }*/
-    .responsive_menu .menu_main_responsive_button {position: absolute; left: 40%; top: 0;}
+    .responsive_menu .menu_main_responsive_button {position: absolute; right: 5%; top: 0;}
     .responsive_menu .menu_main_wrap .search_wrap {position: absolute; top: 0;left: 55%;}
 
-    .responsive_menu .menu_main_nav_area { width: 100%; padding-top: 50px;}
+    /*.responsive_menu .menu_main_nav_area { width: 100%; padding-top: 50px;}*/
     .menu_main_wrap .menu_main_nav_area .menu_main_responsive a { font-size: 16px; line-height: 18px; }
 
     .menu_user_wrap { font-size: 12px; min-height: 30px; }
@@ -1554,7 +1560,7 @@ Very common low res
     .forwarding_section .columns_wrap { margin-top: 30px; margin-bottom: 45px;}
 
 	/* Columns relayout (no columns) */
-    
+
 
     /* Isotope */
     .isotope_wrap { margin-right: -5px; }
@@ -1613,7 +1619,7 @@ Very common low res
 	.gallery.gallery-columns-5 .gallery-item {	width: 50% !important; }
 	.gallery.gallery-columns-4 .gallery-item {	width: 50% !important; }
 	.gallery.gallery-columns-3 .gallery-item {	width: 50% !important; }
-	
+
 	/* Posts layouts */
     .sc_title { padding-bottom: 0; }
     .sc_title_underline { padding-bottom: 21px; }
@@ -1884,7 +1890,7 @@ Very common low res
         width: 100%;
     }
 	.reviews_block {
-		width:100%; 
+		width:100%;
 	}
 	.content .reviews_block {
 		float:none;
@@ -1893,12 +1899,12 @@ Very common low res
     .reviews_block .reviews_summary .reviews_value {
         font-size: 34px;
     }
-    
+
     .reviews_block .reviews_criteria {width: 100%;}
 
     .sc_tabs_style_3 p + .sc_title_regular {margin-top: 50px;}
-    
-    
+
+
     /* Widgets */
     td, th {
         padding:2px;
@@ -2198,12 +2204,12 @@ Very common low res
 
     .testimonals_bg1 {position: relative;padding: 0;background-position: center center;background-size: cover;}
     /*.testimonals_section .sc_content {margin-bottom: 100px;}*/
-    
+
     .testimonals_section .subtitle_container+.sc_title_regular {margin-top: 0;margin-bottom: 35px;}
     .testimonals_section .sc_content > .subtitle_container + .sc_title_regular + .sc_testimonials {margin-bottom: 100px;}
 
     .timeline_section .sc_section_content .subtitle_container+.sc_title_regular {margin-top: 0;}
-    
+
     .news_section .sc_title_regular {/*margin-top: 60px;*/margin-bottom: 20px;}
     .news_section .subtitle_container {margin-bottom: 20px;}
     .template_news .columns_wrap [class*="col-"] {padding-right: 0;}
@@ -2261,7 +2267,7 @@ Very common low res
 
     /* google maps */
     .sc_googlemap_desc img {width: 44%;}
-    .sc_googlemap_textblock {width: 52%; margin-left: 8px; font-size: 12px;} 
+    .sc_googlemap_textblock {width: 52%; margin-left: 8px; font-size: 12px;}
     .sc_googlemap_title {margin-bottom: 12px;}
 }
 
@@ -2297,7 +2303,7 @@ Very common low res
         -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0px) scale(0.8);
         -moz-transform: translateX(-50%) translateY(-50%) translateZ(0px) scale(0.8);
         transform: translateX(-50%) translateY(-50%) translateZ(0px) scale(0.8);
-    }    
+    }
 
     .isotope_wrap .isotope_item_grid .post_item .hover_wrap .hover_content .hover,
     .isotope_wrap .isotope_item_square .post_item .hover_wrap .hover_content .hover,
