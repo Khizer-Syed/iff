@@ -160,7 +160,7 @@
                                 </li>
                             </ul>
                         </nav>
-                        <a href="#" class="menu_main_responsive_button icon-menu"></a>
+                        <a href="#" class="menu_main_responsive_button" [ngClass]="{'icon-menu': !openMenu, 'icon-cancel-1': openMenu}" (click)="openMenu = !openMenu"></a>
 <!--                        <div class="search_wrap search_style_regular search_state_closed search_ajax">-->
 <!--                            <div class="search_form_wrap">-->
 <!--                                <form method="get" class="search_form" action="index.html">-->
@@ -499,7 +499,7 @@
                 </div>
             </section>
 
-            <section class="fullwidth_section no_padding_top_container calculator_bg1">
+            <section class="fullwidth_section no_padding_top_container">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12">
@@ -525,9 +525,11 @@
                                                                         <div class="fields">
                                                                             <div class="fields">
                                                                                 <div class="fields">
-                                                                                    <label>Distance</label>
+                                                                                    <label>Shipping Mode</label>
                                                                                     <div class="dfield">
-                                                                                        <input name="fieldname2_1" class="field number large" type="text" value="">
+                                                                                      <input name="fieldname2_1" class="field number large" type="radio" value="air">
+                                                                                      <input name="fieldname2_1" class="field number large" type="radio" value="ocean">
+                                                                                      <input name="fieldname2_1" class="field number large" type="radio" value="land">
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="fields">
