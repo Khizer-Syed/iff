@@ -4,7 +4,7 @@
   "type": "commonjs",
   "scripts": {
     "start": "node server/index.js",
-    "client": "ng serve --open",
+    "client": "ng serve --open --port 4300",
     "build": "ng build --prod --aot --output-path build",
     "postinstall": "npm run build",
     "lint": "ng lint"
