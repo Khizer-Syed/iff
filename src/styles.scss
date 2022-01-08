@@ -1,0 +1,111 @@
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+@import './src/form';
+
+$border-color: #dee2e6;
+.icon:hover {
+  cursor: pointer;
+}
+
+@media(max-width: 576px) {
+  .modal-dialog {
+    margin: 1rem;
+
+    &-centered {
+      align-items: stretch !important;
+      min-height: calc(100% - 2rem);
+    }
+  }
+}
+
+.bordered-table {
+  tr {
+    th:first-of-type, td:first-child {
+      border-left: 1px solid $border-color;
+    }
+
+    th:last-of-type, td:last-child {
+      border-right: 1px solid $border-color;
+    }
+  }
+
+  tr:last-of-type td {
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.table-hover {
+  tbody tr td {
+    cursor: pointer;
+  }
+}
+
+body {
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  *::-webkit-scrollbar:horizontal {
+    height: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 20px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #777;
+    border-radius: 20px;
+    border: 3px solid #777;
+  }
+
+  .btn:focus {
+    outline: 1px solid rgb(0 123 255);
+  }
+  .content-wrapper {
+    background-color: #FFFFFF;
+  }
+
+  .text-green {
+    color: #1e7e34 !important;
+  }
+  .btn-warning {
+    background-color: #FFD814;
+    border-color: #FFD814;
+  }
+  .loading {
+    background: linear-gradient(100deg, #eceff1 30%, #f6f7f8 50%, #eceff1 70%);
+  }
+}
+
+.dark-mode {
+  *::-webkit-scrollbar-track {
+    background: #999;
+    border-radius: 20px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #4444;
+    border-radius: 20px;
+    border: 3px solid #4444;
+  }
+
+  .popover {
+    background-color: #454545;
+
+    .arrow::after {
+      border-right-color: #454545;
+    }
+
+    &-body {
+      color: #FFFFFF;
+    }
+  }
+  .loading {
+    background: linear-gradient(100deg, #555 30%, #777 50%, #555 70%);
+  }
+}
+
+

@@ -1,0 +1,47 @@
+.form-control {
+    &:focus {
+        border-color: dodgerblue;
+        border-width: 2px;
+    }
+}
+.is-invalid {
+    border-width: 2px;
+}
+.form-label, .col-form-label, .note {
+    span {
+        color: red;
+        line-height: 24px;
+        vertical-align: middle;
+    }
+}
+
+.form-group {
+    position: relative;
+    .password {
+        &-control {
+            padding-right: 30px;
+            &.is-invalid {
+                background-image: none;
+            }
+        }
+        &-icon {
+            position: absolute;
+            top: 45px;
+            right: 10px;
+            cursor: pointer;
+            color: #999;
+        }
+    }
+
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
