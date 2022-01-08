@@ -4,7 +4,7 @@
     "type": "commonjs",
     "scripts": {
         "start": "cd iffcargo/server && node server.js",
-        "start-prod": "cd server && pm2 start server.js",
+        "start-prod": "cd server && pm2 start server.js --name iffcargo",
         "client": "ng serve --open --port 4300",
         "build": "ng build --configuration production --aot",
         "lint": "ng lint"
