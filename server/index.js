@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path')
 const bodyParser = require('body-parser')
 import {quoteRouter} from "./api/customer-quote";
-const port = process.env.PORT || 5000;
+const port = process.env.COM_PORT || 5000;
 
 const app = express();
 app.use(bodyParser.json());
