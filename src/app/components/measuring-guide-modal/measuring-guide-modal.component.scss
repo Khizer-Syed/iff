@@ -1,0 +1,30 @@
+:host {
+    height: 100%;
+}
+
+.modal-body {
+    position: relative;
+    height: 100%;
+    .dismiss_button {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        z-index: 1;
+        button {
+            font-size: 1.75rem;
+            &:hover {
+                color: #dc3545;
+            }
+        }
+    }
+
+    .img-wrapper {
+        display: grid;
+        place-content: center;
+        width: auto;
+        height: 100%;
+        img {
+            width: 100%;
+        }
+    }
+}
