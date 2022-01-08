@@ -1,7 +1,7 @@
-import express from 'express';
-import { pick } from 'lodash';
-import axios from 'axios';
-import sgMail from '@sendgrid/mail';
+const express = require('express');
+const { pick } = require('lodash');
+const axios = require('axios');
+const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const router = express.Router();
@@ -33,8 +33,6 @@ router.post('', async (req, res, next) => {
         res.status(400).send({errors: [{message: e}]});
     }
 });
-
-export {router as quoteRouter};
 
 const validateQuote = (requestDetails, res) => {
     const shippingInfo = pick(requestDetails.shippingInfo, ['origin', 'destination', 'shippingMode', 'shippingVolume', 'containerType', 'containerSize']);
@@ -228,3 +226,5 @@ function addDisclaimer(template) {
                 </div>
             </div>`;
 }
+
+module.exports = router;
