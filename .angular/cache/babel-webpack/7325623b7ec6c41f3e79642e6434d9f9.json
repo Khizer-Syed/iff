@@ -1,1 +1,0 @@
-{"ast":null,"code":"export function nonZeroValidator() {\n  return control => {\n    const valid = control.value > 0;\n    return valid ? null : {\n      invalid: {\n        value: control.value\n      }\n    };\n  };\n}","map":null,"metadata":{},"sourceType":"module"}
