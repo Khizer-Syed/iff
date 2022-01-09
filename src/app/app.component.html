@@ -1,836 +1,857 @@
-<ngb-carousel>
-  <ng-template ngbSlide>
-    <div class="container-fluid brand-wrapper">
-      <div class="brand-wrapper__2 d-flex flex-column justify-content-between h-100 w-100">
-        <nav class="navbar">
-          <a class="navbar-brand"><img src="assets/img/logo.png" height="40px" width="100px" alt="IFF Cargo"></a>
-        </nav>
-        <div class="row">
-          <div class="col-12">
-            <h1 class="text-center text-white" style="font-size: 4rem">INTERNATIONAL SHIPPING</h1>
-          </div>
-          <div class="col-12">
-            <h1 class="text-center text-white" style="font-size: 4rem">AIR / OCEAN / LAND</h1>
-          </div>
+<ngb-carousel #carousel pauseOnHover="true" pauseOnFocus="true" interval="10000">
+    <ng-template ngbSlide>
+        <div class="container-fluid brand-wrapper">
+            <div class="brand-wrapper__2 d-flex flex-column justify-content-between h-100 w-100">
+                <nav class="navbar">
+                    <a class="navbar-brand"><img src="assets/img/logo.png" height="40px" width="100px" alt="IFF Cargo"></a>
+                </nav>
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="text-center text-white carousel-heading">NEED RELIABLE AND FAST SHIPPING?</h1>
+                    </div>
+                    <div class="col-12">
+                        <h1 class="text-center text-white carousel-heading">WE GOT YOU COVERED</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <img src="assets/img/aeroplane.png" alt="Aeroplane" class="animate-right" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row">
-          <div class="col">
-            <img src="assets/img/aeroplane.png" alt="Aeroplane" class="animate-right">
-          </div>
-        </div>
-      </div>
-    </div>
-  </ng-template>
+    </ng-template>
 
-  <ng-template ngbSlide>
-    <div class="container-fluid d-flex flex-column justify-content-between brand-wrapper">
-      <nav class="navbar">
-        <a class="navbar-brand"><img src="assets/img/logo.png" height="40px" width="100px" alt="IFF Cargo"></a>
-      </nav>
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12">
-            <h1 class="text-center text-white" style="font-size: 4rem">LARGE ENOUGH TO HANDLE,</h1>
-          </div>
-          <div class="col-12">
-            <h1 class="text-center text-white sub-heading" style="font-size: 4rem">SMALL ENOUGH TO CARE</h1>
-          </div>
+    <ng-template ngbSlide>
+        <div class="container-fluid d-flex flex-column justify-content-between brand-wrapper">
+            <nav class="navbar">
+                <a class="navbar-brand"><img src="assets/img/logo.png" height="40px" width="100px" alt="IFF Cargo"></a>
+            </nav>
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <h1 class="text-center text-white carousel-heading">LARGE ENOUGH TO HANDLE,</h1>
+                    </div>
+                    <div class="col-12">
+                        <h1 class="text-center text-white sub-heading carousel-heading">SMALL ENOUGH TO CARE</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <img src="assets/img/forklift.png" alt="ForkLift" class="animate-right" style="width: 100%;">
+                    </div>
+                    <div class="col-9">
+                        <img src="assets/img/truck.png" alt="Truck" class="animate-left" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row">
-          <div class="col-3 img-wrapper-1">
-            <img src="assets/img/forklift.png" alt="ForkLift" class="animate-right">
-          </div>
-          <div class="col-9 img-wrapper-2">
-            <img src="assets/img/truck.png" alt="Truck" class="animate-left">
-          </div>
-        </div>
-      </div>
-    </div>
-  </ng-template>
+    </ng-template>
 
 
-  <ng-template ngbSlide>
-    <div class="container-fluid d-flex flex-column justify-content-between brand-wrapper">
-      <nav class="navbar">
-        <a class="navbar-brand"><img src="assets/img/logo.png" height="40px" width="100px" alt="IFF Cargo"></a>
-      </nav>
-      <div class="container">
-        <div class="row">
-          <div class="col-6">
-            <img src="assets/img/ship.png" alt="Ship" class="animate-right">
-          </div>
-          <div class="col-6">
+    <ng-template ngbSlide>
+        <div class="container-fluid d-flex flex-column justify-content-between brand-wrapper">
+            <nav class="navbar">
+                <a class="navbar-brand"><img src="assets/img/logo.png" height="40px" width="100px" alt="IFF Cargo"></a>
+            </nav>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <img src="assets/img/ship.png" alt="Ship" class="animate-right" style="width: 100%;">
+                    </div>
+                    <div class="col-6">
 
-          </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </ng-template>
+    </ng-template>
 </ngb-carousel>
 
 <section class="container my-5 services">
-  <div class="row mb-5">
-    <div class="col">
-      <h1 class="text-center font-weight-light">OUR SERVICES</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-body">
-          <div class="services-icon"><i class="fas fa-box"></i></div>
-          <h6 class="text-uppercase text-center">Custom Clearance in Canada</h6>
-          <p class="text-center">Preparation<br/>
-            Releasing Goods<br/>
-            Examinations<br/>
-            Duties & Taxes</p>
+    <div class="row mb-5">
+        <div class="col">
+            <h1 class="text-center font-weight-light">OUR SERVICES</h1>
         </div>
-      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="services-icon"><i class="fas fa-box"></i></div>
+                    <h6 class="text-uppercase text-center">Custom Clearance in Canada</h6>
+                    <p class="text-center">Preparation<br/>
+                        Releasing Goods<br/>
+                        Examinations<br/>
+                        Duties & Taxes</p>
+                </div>
+            </div>
 
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-body">
-          <div class="services-icon"><i class="fas fa-truck-moving"></i></div>
-          <h6 class="text-uppercase text-center">Pickup & Delivery</h6>
-          <p class="text-center">
-            Door-to-door courier service to more than 180,000 cities around the world.<br/>
-            Cross border shipment from/to USA for trade shows and exhibitions.
-          </p>
         </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-body">
-          <div class="services-icon"><i class="fas fa-paste"></i></div>
-          <h6 class="text-uppercase text-center">Documentation & Insurance</h6>
-          <p class="text-center">
-            Preparation of export documents, Letter of Credit (L/C) preparation & negotiation.<br/>
-            Insurance coverage for all modes of transport, domestic and international.
-          </p>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="services-icon"><i class="fas fa-truck-moving"></i></div>
+                    <h6 class="text-uppercase text-center">Pickup & Delivery</h6>
+                    <p class="text-center">
+                        Door-to-door courier service to more than 180,000 cities around the world.<br/>
+                        Cross border shipment from/to USA for trade shows and exhibitions.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="services-icon"><i class="fas fa-paste"></i></div>
+                    <h6 class="text-uppercase text-center">Documentation & Insurance</h6>
+                    <p class="text-center">
+                        Preparation of export documents, Letter of Credit (L/C) preparation & negotiation.<br/>
+                        Insurance coverage for all modes of transport, domestic and international.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 <section class="container my-5 quotes">
-  <div class="row">
-    <div class="col">
-      <h1 class="text-center font-weight-light">REQUEST A QUOTE</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <p class="text-muted small">Thank you for your interest in our products and solutions. Please provide us
-        with the following information and a IFF
-        representative will contact you shortly to help you identify the right solution for your needs. All
-        required fields are marked by an asterisk (*)</p>
-    </div>
-  </div>
-  <div class="row mt-3">
-    <div class="col">
-      <div class="card">
-        <div class="card-body">
-          <form [formGroup]="customerQuote" (ngSubmit)="requestQuote()">
-            <fieldset>
-              <legend>Customer Information</legend>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="name"><span class="text-danger">*</span> Name</label>
-                  <input type="text"
-                         [ngClass]="{'is-invalid': !customerQuote.controls.name.valid && customerQuote.controls.name.touched}"
-                         class="form-control" id="name" placeholder="Name"
-                         formControlName="name">
-                  <div class="invalid-feedback">
-                    Please enter a valid name.
-                  </div>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="company">Company</label>
-                  <input type="text" class="form-control" id="company"
-                         placeholder="Optional" formControlName="company">
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="email"><span class="text-danger">*</span> Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="Email"
-                         [ngClass]="{'is-invalid': !customerQuote.controls.email.valid && customerQuote.controls.email.touched}"
-                         formControlName="email">
-                  <div class="invalid-feedback">
-                    Please enter a valid email.
-                  </div>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="phone"><span class="text-danger">*</span> Phone</label>
-                  <input type="tel" class="form-control" id="phone" placeholder="Phone #"
-                         [ngClass]="{'is-invalid': !customerQuote.controls.phone.valid && customerQuote.controls.phone.touched}"
-                         formControlName="phone" maxlength="15" minlength="10">
-                  <div class="invalid-feedback">
-                    Please enter a valid phone.
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>Shipping Information</legend>
-              <ng-container formGroupName="shippingInfo">
-                <div class="form-row">
-                  <div class="col-md-6" formGroupName="origin">
-                    <div class="row">
-                      <div class="form-group col-12">
-                        <label for="from"><span class="text-danger">*</span> From</label>
-                        <input type="text" class="form-control" id="from" placeholder="Origin"
-                               [ngClass]="{'is-invalid': !customerQuote.get(['shippingInfo', 'origin', 'from'])?.valid && customerQuote.get(['shippingInfo', 'origin', 'from'])?.touched}"
-                               formControlName="from" appUppercaseMask>
-                        <div class="invalid-feedback">
-                          Please enter a valid pickup address.
-                        </div>
-                      </div>
-                      <div class="form-group col-12">
-                        <div class="custom-control custom-radio custom-control-inline">
-                          <input type="radio" id="fromDoor" formControlName="pickupPoint"
-                                 class="custom-control-input" [value]="shippingPoint.Door">
-                          <label class="custom-control-label font-weight-light"
-                                 for="fromDoor">Door</label>
-                        </div>
-                        <div class="custom-control custom-radio custom-control-inline">
-                          <input type="radio" id="fromTerminal" formControlName="pickupPoint"
-                                 [value]="shippingPoint.TerminalOrPort"
-                                 class="custom-control-input">
-                          <label class="custom-control-label font-weight-light"
-                                 for="fromTerminal">Terminal/Port</label>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                  <div class="col-md-6" formGroupName="destination">
-                    <div class="row">
-                      <div class="form-group col-12">
-                        <label for="to"><span class="text-danger">*</span> To</label>
-                        <input type="text" class="form-control" id="to"
-                               [ngClass]="{'is-invalid': !customerQuote.get(['shippingInfo', 'destination', 'to'])?.valid && customerQuote.get(['shippingInfo', 'destination', 'to'])?.touched}"
-                               placeholder="Destination" formControlName="to" appUppercaseMask>
-                        <div class="invalid-feedback">
-                          Please enter a valid destination address.
-                        </div>
-                      </div>
-                      <div class="form-group col-12">
-                        <div class="custom-control custom-radio custom-control-inline">
-                          <input type="radio" id="toDoor" formControlName="deliveryPoint"
-                                 class="custom-control-input" [value]="shippingPoint.Door">
-                          <label class="custom-control-label font-weight-light" for="toDoor">Door</label>
-                        </div>
-                        <div class="custom-control custom-radio custom-control-inline">
-                          <input type="radio" id="toTerminal" formControlName="deliveryPoint"
-                                 class="custom-control-input"
-                                 [value]="shippingPoint.TerminalOrPort">
-                          <label class="custom-control-label font-weight-light"
-                                 for="toTerminal">Terminal/Port</label>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">
-                    <label><span class="text-danger">*</span> Shipping Mode: &nbsp;</label>
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" id="air" formControlName="shippingMode"
-                             class="custom-control-input" [value]="shippingMode.Air"
-                             (ngModelChange)="changeShippingMode($event)">
-                      <label class="custom-control-label font-weight-light" for="air">Air</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" id="ocean" formControlName="shippingMode"
-                             class="custom-control-input" [value]="shippingMode.Ocean"
-                             (ngModelChange)="changeShippingMode($event)">
-                      <label class="custom-control-label font-weight-light"
-                             for="ocean">Ocean</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" id="land" formControlName="shippingMode"
-                             class="custom-control-input" [value]="shippingMode.Land"
-                             (ngModelChange)="changeShippingMode($event)">
-                      <label class="custom-control-label font-weight-light"
-                             for="land">Land</label>
-                    </div>
-                  </div>
-                </div>
-                <ng-container *ngIf="customerQuote.get('shippingInfo.shippingMode')?.value === shippingMode.Ocean || customerQuote.get('shippingInfo.shippingMode')?.value === shippingMode.Land">
-                  <div class="row mb-3">
-                    <div class="col-12">
-                      <label class="mb-0"><span class="text-danger">*</span> Shipping Volume: &nbsp;</label>
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="lcl"
-                               (ngModelChange)="changeShippingVolume($event)"
-                               formControlName="shippingVolume" class="custom-control-input"
-                               [value]="shippingVolume.LCL">
-                        <label class="custom-control-label font-weight-light" for="lcl">Loose
-                          Container Load</label>
-                      </div>
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="fcl"
-                               (ngModelChange)="changeShippingVolume($event)"
-                               formControlName="shippingVolume" class="custom-control-input"
-                               [value]="shippingVolume.FCL">
-                        <label class="custom-control-label font-weight-light" for="fcl">Full
-                          Container Load</label>
-                      </div>
-                    </div>
-                    <div class="col" style="line-height: 1">
-                      <small class="text-muted">Choose full container load to enquire about the price for an entire container or choose loose container load if your shipment isn't large enough to fit an entire container.</small>
-                    </div>
-                  </div>
-
-                  <div class="form-row"
-                       *ngIf="customerQuote.get('shippingInfo.shippingVolume')?.value === shippingVolume.FCL">
-                    <div class="form-group col-md-3">
-                      <div class="mb-2"><label><span class="text-danger">*</span> Container
-                        Type</label></div>
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="dry" formControlName="containerType"
-                               class="custom-control-input" [value]="containerType.Dry">
-                        <label class="custom-control-label font-weight-light" for="dry">Dry</label>
-                      </div>
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="refrigerated" formControlName="containerType"
-                               class="custom-control-input" [value]="containerType.Refrigerated">
-                        <label class="custom-control-label font-weight-light" for="refrigerated">Refrigerated</label>
-                      </div>
-                    </div>
-                    <div class="form-group col-md-3">
-                      <label for="containerSize"><span class="text-danger">*</span> Container
-                        Size</label>
-                      <select id="containerSize" class="custom-control custom-select"
-                              formControlName="containerSize">
-                        <option [value]="containerSize['20ft']">20 ft.</option>
-                        <option [value]="containerSize['40ft']">40 ft.</option>
-                        <option [value]="containerSize['40ft-high']">40 ft. high cube</option>
-                        <option [value]="containerSize['45ft']">45 ft.</option>
-                      </select>
-                    </div>
-                  </div>
-                </ng-container>
-              </ng-container>
-
-              <ng-container *ngIf="checkToAddItems()">
-                <div class="row mb-1">
-                  <div class="col">
-                    <button class="btn btn-link" type="button" (click)="openMeasuringGuide()">Measuring Guide <i class="fas fa-external-link-alt"></i></button>
-                  </div>
-                </div>
-                <ng-container *ngFor="let item of getArrayControls(); let i = index">
-                  <ng-container [formGroup]="item">
-                    <div class="card mb-0">
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-md-9">
-                            <div class="row">
-                              <div class="col">
-                                <div class="form-group">
-                                  <label for="length"><span
-                                    class="text-danger">*</span>
-                                    Length</label>
-                                  <input id="length" type="number"
-                                         class="form-control" min="0"
-                                         [ngClass]="{'is-invalid': !item.controls.length.valid && item.controls.length.touched}"
-                                         formControlName="length"
-                                         (ngModelChange)="calculateVolumeWeight(i)">
-                                  <div class="invalid-feedback">
-                                    Please enter a valid length
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col">
-                                <div class="form-group">
-                                  <label for="width"><span
-                                    class="text-danger">*</span> Width</label>
-                                  <input id="width" type="number" class="form-control"
-                                         [ngClass]="{'is-invalid': !item.controls.width.valid && item.controls.width.touched}"
-                                         formControlName="width" min="0"
-                                         (ngModelChange)="calculateVolumeWeight(i)">
-                                  <div class="invalid-feedback">
-                                    Please enter a valid width
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col">
-                                <div class="form-group">
-                                  <label for="height"><span
-                                    class="text-danger">*</span>
-                                    Height</label>
-                                  <input id="height" type="number"
-                                         class="form-control" min="0"
-                                         [ngClass]="{'is-invalid': !item.controls.height.valid && item.controls.height.touched}"
-                                         formControlName="height"
-                                         (ngModelChange)="calculateVolumeWeight(i)">
-                                  <div class="invalid-feedback">
-                                    Please enter a valid height
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col d-flex align-items-end">
-                                <div
-                                  class="custom-control custom-radio custom-control-inline mb-3">
-                                  <input type="radio" id="cm"
-                                         formControlName="dimensionalUnit"
-                                         class="custom-control-input"
-                                         (ngModelChange)="calculateVolumeWeight(i)"
-                                         [value]="dimensionalUnit.cm">
-                                  <label
-                                    class="custom-control-label font-weight-light"
-                                    for="cm">cm</label>
-                                </div>
-                                <div
-                                  class="custom-control custom-radio custom-control-inline mb-3">
-                                  <input type="radio" id="inch"
-                                         formControlName="dimensionalUnit"
-                                         class="custom-control-input"
-                                         (ngModelChange)="calculateVolumeWeight(i)"
-                                         [value]="dimensionalUnit.inch">
-                                  <label
-                                    class="custom-control-label font-weight-light"
-                                    for="inch">inch</label>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row mb-3"
-                                 *ngIf="item.get('volumeWeight')?.value !== '0.000 kg'">
-                              <div class="col-auto">
-                                <div class="form-group">
-                                  <label for="volumeWeight">Calculated Volume
-                                    Weight</label>
-                                  <input id="volumeWeight" class="form-control"
-                                         [attr.readonly]="true"
-                                         formControlName="volumeWeight">
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-3">
-                                <div class="form-group mb-0">
-                                  <label for="weight"><span
-                                    class="text-danger">*</span>
-                                    Weight</label>
-                                  <input id="weight" type="number"
-                                         class="form-control" min="0"
-                                         [ngClass]="{'is-invalid': !item.controls.weight.valid && item.controls.weight.touched}"
-                                         formControlName="weight"
-                                         (ngModelChange)="calculateWeight(i)">
-                                  <div class="invalid-feedback">
-                                    Please enter a valid weight
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-md-3 d-flex align-items-end">
-                                <div
-                                  class="custom-control custom-radio custom-control-inline">
-                                  <input type="radio" id="kgs"
-                                         formControlName="weightUnit"
-                                         class="custom-control-input"
-                                         (ngModelChange)="calculateWeight(i)"
-                                         [value]="weightUnit.kgs">
-                                  <label
-                                    class="custom-control-label font-weight-light"
-                                    for="kgs">kgs</label>
-                                </div>
-                                <div
-                                  class="custom-control custom-radio custom-control-inline">
-                                  <input type="radio" id="lbs"
-                                         formControlName="weightUnit"
-                                         class="custom-control-input"
-                                         (ngModelChange)="calculateWeight(i)"
-                                         [value]="weightUnit.lbs">
-                                  <label
-                                    class="custom-control-label font-weight-light"
-                                    for="lbs">lbs</label>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row mb-3 mt-1">
-                              <div class="col" style="line-height: 1">
-                                <small class="text-muted">Input the weight of only 1
-                                  item.</small>
-                              </div>
-                            </div>
-                            <div class="row mb-3"
-                                 *ngIf="item.get('actualWeight')?.value !== '0.000 kg'">
-                              <div class="col-auto">
-                                <div class="form-group">
-                                  <label for="actualWeight">Calculated Actual
-                                    Weight</label>
-                                  <input id="actualWeight" class="form-control"
-                                         [attr.readonly]="true"
-                                         formControlName="actualWeight">
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-3">
-                            <div class="form-group">
-                              <label for="quantity"><span class="text-danger">*</span>
-                                No. of Items</label>
-                              <input id="quantity" type="number" class="form-control"
-                                     formControlName="qty" min="1"
-                                     (ngModelChange)="updateQty(i)">
-                              <small class="form-text text-muted">If you have more than 1
-                                item of the same dimensions and weight.</small>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col">
-                            <button type="button" class="btn btn-outline-danger"
-                                    (click)="removeControl(i)"
-                                    [disabled]="getArrayControls().length === 1">Delete
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </ng-container>
-                </ng-container>
-                <div class="row my-3">
-                  <div class="col-auto">
-                    <button type="button" class="btn btn-link p-0" (click)="addControl()">Click here
-                      to add more items
-                    </button>
-                  </div>
-                </div>
-                <div class="row mb-3"
-                     *ngIf="customerQuote.get('totalActualWeight')?.value !== '0.000 kg' || customerQuote.get('totalVolumeWeight')?.value !== '0.000 kg'">
-                  <div class="col">
-                    <div class="card">
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-6"
-                               *ngIf="customerQuote.get('totalVolumeWeight')?.value !== '0.000 kg'">
-                            <div class="form-group">
-                              <label for="totalVolumeWeight">Total Volume Weight</label>
-                              <input id="totalVolumeWeight" class="form-control"
-                                     [attr.readonly]="true"
-                                     formControlName="totalVolumeWeight">
-                            </div>
-                          </div>
-                          <div class="col-6"
-                               *ngIf="customerQuote.get('totalActualWeight')?.value !== '0.000 kg'">
-                            <div class="form-group">
-                              <label for="totalActualWeight">Total Actual Weight</label>
-                              <input id="totalActualWeight" class="form-control"
-                                     [attr.readonly]="true"
-                                     formControlName="totalActualWeight">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </ng-container>
-            </fieldset>
-
-            <fieldset>
-              <legend>Additional Information</legend>
-              <div class="row mb-3">
-                <div class="col-md-3">
-                  <label for="termsOfSale">Terms of Sale</label>
-                  <select id="termsOfSale" formControlName="termsOfSale" class="custom-select custom-control" (ngModelChange)="changeTermsOfSale($event)">
-                    <option value="">Don't know</option>
-                    <option [value]="termsOfSale.ExWorks">Ex Works</option>
-                    <option [value]="termsOfSale.FOB">FOB</option>
-                    <option [value]="termsOfSale.CIF">CIF</option>
-                    <option [value]="termsOfSale.CF">C & F</option>
-                    <option [value]="termsOfSale.Other">Other</option>
-                  </select>
-                </div>
-                <div class="col-md-3 d-flex align-items-end" *ngIf="customerQuote.get('termsOfSale')?.value === termsOfSale.Other">
-                  <input type="text" class="form-control" formControlName="termsOfSaleOther">
-                </div>
-              </div>
-              <div class="row mb-3">
-                <div class="col-12">
-                  <label>Is your item Hazardous?</label>
-                </div>
-                <div class="col">
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="no"
-                           (ngModelChange)="changeHazardRating($event)"
-                           formControlName="hazardous" class="custom-control-input"
-                           [value]="prompt.No">
-                    <label class="custom-control-label font-weight-light" for="no">No</label>
-                  </div>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="yes"
-                           (ngModelChange)="changeHazardRating($event)"
-                           formControlName="hazardous" class="custom-control-input"
-                           [value]="prompt.Yes">
-                    <label class="custom-control-label font-weight-light" for="yes">Yes</label>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row" *ngIf="customerQuote.get('hazardous')?.value === prompt.Yes">
-                <div class="col">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="row">
-                        <div class="col">
-                          <div class="form-group">
-                            <label for="unNumber"><span
-                              class="text-danger">*</span>
-                              UN Number</label>
-                            <input id="unNumber"
-                                   class="form-control"
-                                   [ngClass]="{'is-invalid': !customerQuote.controls.unNumber.valid && customerQuote.controls.unNumber.touched}"
-                                   formControlName="unNumber">
-                            <div class="invalid-feedback">
-                              Please enter a valid UN Number
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="form-group">
-                            <label for="pageNumber">
-                              Page Number</label>
-                            <input id="pageNumber"
-                                   class="form-control"
-                                   placeholder="Optional"
-                                   formControlName="pageNumber">
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="form-group">
-                            <label for="classNumber">
-                              Class Number</label>
-                            <input id="classNumber"
-                                   class="form-control"
-                                   placeholder="Optional"
-                                   formControlName="classNumber">
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="form-group">
-                            <label for="packingGroup">
-                              Packing Group</label>
-                            <input id="packingGroup"
-                                   class="form-control"
-                                   placeholder="Optional"
-                                   formControlName="packingGroup">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-            <div class="row mb-3">
-              <div class="col">
-                <re-captcha formControlName="token"></re-captcha>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <button type="submit" class="btn btn-secondary mr-3">
-                  Request Quote
-                </button>
-                <button type="button" class="btn btn-danger" (click)="resetForm()">Reset Form</button>
-              </div>
-            </div>
-          </form>
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center font-weight-light">REQUEST A QUOTE</h1>
         </div>
-      </div>
     </div>
-  </div>
+    <div class="row">
+        <div class="col">
+            <p class="text-muted small">Thank you for your interest in our products and solutions. Please provide us
+                with the following information and a IFF
+                representative will contact you shortly to help you identify the right solution for your needs. All
+                required fields are marked by an asterisk (*)</p>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <form [formGroup]="customerQuote" (ngSubmit)="requestQuote()">
+                        <fieldset>
+                            <legend>Customer Information</legend>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="name"><span class="text-danger">*</span> Name</label>
+                                    <input type="text"
+                                           [ngClass]="{'is-invalid': !customerQuote.controls.name.valid && customerQuote.controls.name.touched}"
+                                           class="form-control" id="name" placeholder="Name"
+                                           formControlName="name">
+                                    <div class="invalid-feedback">
+                                        Please enter a valid name.
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="company">Company</label>
+                                    <input type="text" class="form-control" id="company"
+                                           placeholder="Optional" formControlName="company">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="email"><span class="text-danger">*</span> Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Email"
+                                           [ngClass]="{'is-invalid': !customerQuote.controls.email.valid && customerQuote.controls.email.touched}"
+                                           formControlName="email">
+                                    <div class="invalid-feedback">
+                                        Please enter a valid email.
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="phone"><span class="text-danger">*</span> Phone</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="Phone #"
+                                           [ngClass]="{'is-invalid': !customerQuote.controls.phone.valid && customerQuote.controls.phone.touched}"
+                                           formControlName="phone" maxlength="15" minlength="10">
+                                    <div class="invalid-feedback">
+                                        Please enter a valid phone.
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Shipping Information</legend>
+                            <ng-container formGroupName="shippingInfo">
+                                <div class="form-row">
+                                    <div class="col-md-6" formGroupName="origin">
+                                        <div class="row">
+                                            <div class="form-group col-12">
+                                                <label for="from"><span class="text-danger">*</span> From</label>
+                                                <input type="text" class="form-control" id="from" placeholder="Origin"
+                                                       [ngClass]="{'is-invalid': !customerQuote.get(['shippingInfo', 'origin', 'from'])?.valid && customerQuote.get(['shippingInfo', 'origin', 'from'])?.touched}"
+                                                       formControlName="from" appUppercaseMask>
+                                                <div class="invalid-feedback">
+                                                    Please enter a valid pickup address.
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-12">
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="fromDoor" formControlName="pickupPoint"
+                                                           class="custom-control-input" [value]="shippingPoint.Door">
+                                                    <label class="custom-control-label font-weight-light"
+                                                           for="fromDoor">Door</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="fromTerminal" formControlName="pickupPoint"
+                                                           [value]="shippingPoint.TerminalOrPort"
+                                                           class="custom-control-input">
+                                                    <label class="custom-control-label font-weight-light"
+                                                           for="fromTerminal">Terminal/Port</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6" formGroupName="destination">
+                                        <div class="row">
+                                            <div class="form-group col-12">
+                                                <label for="to"><span class="text-danger">*</span> To</label>
+                                                <input type="text" class="form-control" id="to"
+                                                       [ngClass]="{'is-invalid': !customerQuote.get(['shippingInfo', 'destination', 'to'])?.valid && customerQuote.get(['shippingInfo', 'destination', 'to'])?.touched}"
+                                                       placeholder="Destination" formControlName="to" appUppercaseMask>
+                                                <div class="invalid-feedback">
+                                                    Please enter a valid destination address.
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-12">
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="toDoor" formControlName="deliveryPoint"
+                                                           class="custom-control-input" [value]="shippingPoint.Door">
+                                                    <label class="custom-control-label font-weight-light" for="toDoor">Door</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="toTerminal" formControlName="deliveryPoint"
+                                                           class="custom-control-input"
+                                                           [value]="shippingPoint.TerminalOrPort">
+                                                    <label class="custom-control-label font-weight-light"
+                                                           for="toTerminal">Terminal/Port</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <label><span class="text-danger">*</span> Shipping Mode: &nbsp;</label>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="air" formControlName="shippingMode"
+                                                   class="custom-control-input" [value]="shippingMode.Air"
+                                                   (ngModelChange)="changeShippingMode($event)">
+                                            <label class="custom-control-label font-weight-light" for="air">Air</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="ocean" formControlName="shippingMode"
+                                                   class="custom-control-input" [value]="shippingMode.Ocean"
+                                                   (ngModelChange)="changeShippingMode($event)">
+                                            <label class="custom-control-label font-weight-light"
+                                                   for="ocean">Ocean</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="land" formControlName="shippingMode"
+                                                   class="custom-control-input" [value]="shippingMode.Land"
+                                                   (ngModelChange)="changeShippingMode($event)">
+                                            <label class="custom-control-label font-weight-light"
+                                                   for="land">Land</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ng-container
+                                    *ngIf="customerQuote.get('shippingInfo.shippingMode')?.value === shippingMode.Ocean || customerQuote.get('shippingInfo.shippingMode')?.value === shippingMode.Land">
+                                    <div class="row mb-3">
+                                        <div class="col-12">
+                                            <label class="mb-0"><span class="text-danger">*</span> Shipping Volume:
+                                                &nbsp;</label>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="lcl"
+                                                       (ngModelChange)="changeShippingVolume($event)"
+                                                       formControlName="shippingVolume" class="custom-control-input"
+                                                       [value]="shippingVolume.LCL">
+                                                <label class="custom-control-label font-weight-light" for="lcl">Loose
+                                                    Container Load</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="fcl"
+                                                       (ngModelChange)="changeShippingVolume($event)"
+                                                       formControlName="shippingVolume" class="custom-control-input"
+                                                       [value]="shippingVolume.FCL">
+                                                <label class="custom-control-label font-weight-light" for="fcl">Full
+                                                    Container Load</label>
+                                            </div>
+                                        </div>
+                                        <div class="col" style="line-height: 1">
+                                            <small class="text-muted">Choose full container load to enquire about the
+                                                price for an entire container or choose loose container load if your
+                                                shipment isn't large enough to fit an entire container.</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row"
+                                         *ngIf="customerQuote.get('shippingInfo.shippingVolume')?.value === shippingVolume.FCL">
+                                        <div class="form-group col-md-3">
+                                            <div class="mb-2"><label><span class="text-danger">*</span> Container
+                                                Type</label></div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="dry" formControlName="containerType"
+                                                       class="custom-control-input" [value]="containerType.Dry">
+                                                <label class="custom-control-label font-weight-light"
+                                                       for="dry">Dry</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="refrigerated" formControlName="containerType"
+                                                       class="custom-control-input"
+                                                       [value]="containerType.Refrigerated">
+                                                <label class="custom-control-label font-weight-light"
+                                                       for="refrigerated">Refrigerated</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="containerSize"><span class="text-danger">*</span> Container
+                                                Size</label>
+                                            <select id="containerSize" class="custom-control custom-select"
+                                                    formControlName="containerSize">
+                                                <option [value]="containerSize['20ft']">20 ft.</option>
+                                                <option [value]="containerSize['40ft']">40 ft.</option>
+                                                <option [value]="containerSize['40ft-high']">40 ft. high cube</option>
+                                                <option [value]="containerSize['45ft']">45 ft.</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </ng-container>
+                            </ng-container>
+
+                            <ng-container *ngIf="checkToAddItems()">
+                                <div class="row mb-1">
+                                    <div class="col">
+                                        <button class="btn btn-link" type="button" (click)="openMeasuringGuide()">
+                                            Measuring Guide <i class="fas fa-external-link-alt"></i></button>
+                                    </div>
+                                </div>
+                                <ng-container *ngFor="let item of getArrayControls(); let i = index">
+                                    <ng-container [formGroup]="item">
+                                        <div class="card mb-0">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label for="length"><span
+                                                                        class="text-danger">*</span>
+                                                                        Length</label>
+                                                                    <input id="length" type="number"
+                                                                           class="form-control" min="0"
+                                                                           [ngClass]="{'is-invalid': !item.controls.length.valid && item.controls.length.touched}"
+                                                                           formControlName="length"
+                                                                           (ngModelChange)="calculateVolumeWeight(i)">
+                                                                    <div class="invalid-feedback">
+                                                                        Please enter a valid length
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label for="width"><span
+                                                                        class="text-danger">*</span> Width</label>
+                                                                    <input id="width" type="number" class="form-control"
+                                                                           [ngClass]="{'is-invalid': !item.controls.width.valid && item.controls.width.touched}"
+                                                                           formControlName="width" min="0"
+                                                                           (ngModelChange)="calculateVolumeWeight(i)">
+                                                                    <div class="invalid-feedback">
+                                                                        Please enter a valid width
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label for="height"><span
+                                                                        class="text-danger">*</span>
+                                                                        Height</label>
+                                                                    <input id="height" type="number"
+                                                                           class="form-control" min="0"
+                                                                           [ngClass]="{'is-invalid': !item.controls.height.valid && item.controls.height.touched}"
+                                                                           formControlName="height"
+                                                                           (ngModelChange)="calculateVolumeWeight(i)">
+                                                                    <div class="invalid-feedback">
+                                                                        Please enter a valid height
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col d-flex align-items-end">
+                                                                <div
+                                                                    class="custom-control custom-radio custom-control-inline mb-3">
+                                                                    <input type="radio" id="cm"
+                                                                           formControlName="dimensionalUnit"
+                                                                           class="custom-control-input"
+                                                                           (ngModelChange)="calculateVolumeWeight(i)"
+                                                                           [value]="dimensionalUnit.cm">
+                                                                    <label
+                                                                        class="custom-control-label font-weight-light"
+                                                                        for="cm">cm</label>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-control custom-radio custom-control-inline mb-3">
+                                                                    <input type="radio" id="inch"
+                                                                           formControlName="dimensionalUnit"
+                                                                           class="custom-control-input"
+                                                                           (ngModelChange)="calculateVolumeWeight(i)"
+                                                                           [value]="dimensionalUnit.inch">
+                                                                    <label
+                                                                        class="custom-control-label font-weight-light"
+                                                                        for="inch">inch</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-3"
+                                                             *ngIf="item.get('volumeWeight')?.value !== '0.000 kg'">
+                                                            <div class="col-auto">
+                                                                <div class="form-group">
+                                                                    <label for="volumeWeight">Calculated Volume
+                                                                        Weight</label>
+                                                                    <input id="volumeWeight" class="form-control"
+                                                                           [attr.readonly]="true"
+                                                                           formControlName="volumeWeight">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <div class="form-group mb-0">
+                                                                    <label for="weight"><span
+                                                                        class="text-danger">*</span>
+                                                                        Weight</label>
+                                                                    <input id="weight" type="number"
+                                                                           class="form-control" min="0"
+                                                                           [ngClass]="{'is-invalid': !item.controls.weight.valid && item.controls.weight.touched}"
+                                                                           formControlName="weight"
+                                                                           (ngModelChange)="calculateWeight(i)">
+                                                                    <div class="invalid-feedback">
+                                                                        Please enter a valid weight
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3 d-flex align-items-end">
+                                                                <div
+                                                                    class="custom-control custom-radio custom-control-inline">
+                                                                    <input type="radio" id="kgs"
+                                                                           formControlName="weightUnit"
+                                                                           class="custom-control-input"
+                                                                           (ngModelChange)="calculateWeight(i)"
+                                                                           [value]="weightUnit.kgs">
+                                                                    <label
+                                                                        class="custom-control-label font-weight-light"
+                                                                        for="kgs">kgs</label>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-control custom-radio custom-control-inline">
+                                                                    <input type="radio" id="lbs"
+                                                                           formControlName="weightUnit"
+                                                                           class="custom-control-input"
+                                                                           (ngModelChange)="calculateWeight(i)"
+                                                                           [value]="weightUnit.lbs">
+                                                                    <label
+                                                                        class="custom-control-label font-weight-light"
+                                                                        for="lbs">lbs</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-3 mt-1">
+                                                            <div class="col" style="line-height: 1">
+                                                                <small class="text-muted">Input the weight of only 1
+                                                                    item.</small>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-3"
+                                                             *ngIf="item.get('actualWeight')?.value !== '0.000 kg'">
+                                                            <div class="col-auto">
+                                                                <div class="form-group">
+                                                                    <label for="actualWeight">Calculated Actual
+                                                                        Weight</label>
+                                                                    <input id="actualWeight" class="form-control"
+                                                                           [attr.readonly]="true"
+                                                                           formControlName="actualWeight">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <label for="quantity"><span class="text-danger">*</span>
+                                                                No. of Items</label>
+                                                            <input id="quantity" type="number" class="form-control"
+                                                                   formControlName="qty" min="1"
+                                                                   (ngModelChange)="updateQty(i)">
+                                                            <small class="form-text text-muted">If you have more than 1
+                                                                item of the same dimensions and weight.</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <button type="button" class="btn btn-outline-danger"
+                                                                (click)="removeControl(i)"
+                                                                [disabled]="getArrayControls().length === 1">Delete
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ng-container>
+                                </ng-container>
+                                <div class="row my-3">
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-link p-0" (click)="addControl()">Click here
+                                            to add more items
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row mb-3"
+                                     *ngIf="customerQuote.get('totalActualWeight')?.value !== '0.000 kg' || customerQuote.get('totalVolumeWeight')?.value !== '0.000 kg'">
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-6"
+                                                         *ngIf="customerQuote.get('totalVolumeWeight')?.value !== '0.000 kg'">
+                                                        <div class="form-group">
+                                                            <label for="totalVolumeWeight">Total Volume Weight</label>
+                                                            <input id="totalVolumeWeight" class="form-control"
+                                                                   [attr.readonly]="true"
+                                                                   formControlName="totalVolumeWeight">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6"
+                                                         *ngIf="customerQuote.get('totalActualWeight')?.value !== '0.000 kg'">
+                                                        <div class="form-group">
+                                                            <label for="totalActualWeight">Total Actual Weight</label>
+                                                            <input id="totalActualWeight" class="form-control"
+                                                                   [attr.readonly]="true"
+                                                                   formControlName="totalActualWeight">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-container>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Additional Information</legend>
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <label for="termsOfSale">Terms of Sale</label>
+                                    <select id="termsOfSale" formControlName="termsOfSale"
+                                            class="custom-select custom-control"
+                                            (ngModelChange)="changeTermsOfSale($event)">
+                                        <option value="">Don't know</option>
+                                        <option [value]="termsOfSale.ExWorks">Ex Works</option>
+                                        <option [value]="termsOfSale.FOB">FOB</option>
+                                        <option [value]="termsOfSale.CIF">CIF</option>
+                                        <option [value]="termsOfSale.CF">C & F</option>
+                                        <option [value]="termsOfSale.Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 d-flex align-items-end"
+                                     *ngIf="customerQuote.get('termsOfSale')?.value === termsOfSale.Other">
+                                    <input type="text" class="form-control" formControlName="termsOfSaleOther">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <label>Is your item Hazardous?</label>
+                                </div>
+                                <div class="col">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="no"
+                                               (ngModelChange)="changeHazardRating($event)"
+                                               formControlName="hazardous" class="custom-control-input"
+                                               [value]="prompt.No">
+                                        <label class="custom-control-label font-weight-light" for="no">No</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="yes"
+                                               (ngModelChange)="changeHazardRating($event)"
+                                               formControlName="hazardous" class="custom-control-input"
+                                               [value]="prompt.Yes">
+                                        <label class="custom-control-label font-weight-light" for="yes">Yes</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row" *ngIf="customerQuote.get('hazardous')?.value === prompt.Yes">
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="unNumber"><span
+                                                            class="text-danger">*</span>
+                                                            UN Number</label>
+                                                        <input id="unNumber"
+                                                               class="form-control"
+                                                               [ngClass]="{'is-invalid': !customerQuote.controls.unNumber.valid && customerQuote.controls.unNumber.touched}"
+                                                               formControlName="unNumber">
+                                                        <div class="invalid-feedback">
+                                                            Please enter a valid UN Number
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="pageNumber">
+                                                            Page Number</label>
+                                                        <input id="pageNumber"
+                                                               class="form-control"
+                                                               placeholder="Optional"
+                                                               formControlName="pageNumber">
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="classNumber">
+                                                            Class Number</label>
+                                                        <input id="classNumber"
+                                                               class="form-control"
+                                                               placeholder="Optional"
+                                                               formControlName="classNumber">
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="packingGroup">
+                                                            Packing Group</label>
+                                                        <input id="packingGroup"
+                                                               class="form-control"
+                                                               placeholder="Optional"
+                                                               formControlName="packingGroup">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <re-captcha formControlName="token"></re-captcha>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button type="submit" class="btn btn-secondary mr-3">
+                                    Request Quote
+                                </button>
+                                <button type="button" class="btn btn-danger" (click)="resetForm()">Reset Form</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </section>
+
+<!-- Testimonials -->
 <section class="container my-5 testimonials">
-  <div class="row">
-    <div class="col">
-      <h1 class="text-center font-weight-light">See what people have to say about us</h1>
-    </div>
-  </div>
-  <div class="row mt-5">
-    <div class="col-md-3">
-      <div class="overall_google_rating">
-        <div class="google_logo">
-          <img src="assets/img/google_logo.png" alt="google logo">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center font-weight-light">See what people have to say about us</h1>
         </div>
-        <ngb-rating [rate]="4.4" [readonly]="true" [max]="5" [starTemplate]="t"></ngb-rating>
-        <h6 class="mt-3 mb-0">EXCELLENT</h6>
-        <small>Based on <strong>28 reviews.</strong></small>
-      </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-3 mb-3 mb-md-0">
+            <div class="overall_google_rating">
+                <div class="google_logo">
+                    <img src="assets/img/google_logo.png" alt="google logo">
+                </div>
+                <ngb-rating [rate]="4.4" [readonly]="true" [max]="5" [starTemplate]="t"></ngb-rating>
+                <h6 class="mt-3 mb-0">EXCELLENT</h6>
+                <small>Based on <strong>28 reviews.</strong></small>
+            </div>
 
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card testimonials-wrapper">
+                        <div class="card-body ">
+                            <div class="d-flex justify-content-between">
+                                <div class="img_name"><span>K</span></div>
+                                <div class="d-flex flex-column">
+                                    <h6 class="mb-0">Khizer Syed</h6>
+                                    <small class="text-muted">December 13, 2020</small>
+                                </div>
+                                <div class="google_g_logo"><img src="assets/img/google_g_logo.png" alt="google_g_logo">
+                                </div>
+                            </div>
+                            <ngb-rating [rate]="5" [readonly]="true" [max]="5" [starTemplate]="t"></ngb-rating>
+                            <div class="text-muted mt-3 mb-0 testimonials-wrapper__testimonial"
+                                 style="font-size: .75rem;">
+                                <b>Positive</b>: Professionalism, Quality, Responsiveness, Value<br /><br />
+                                Responsive and easy shipping process. Highly recommended!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card testimonials-wrapper">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div class="img_name"><span>J</span></div>
+                                <div class="d-flex flex-column">
+                                    <h6 class="mb-0">Jose Chilombo</h6>
+                                    <small class="text-muted">April 16, 2021</small>
+                                </div>
+                                <div class="google_g_logo"><img src="assets/img/google_g_logo.png" alt="google_g_logo">
+                                </div>
+                            </div>
+                            <ngb-rating [rate]="5" [readonly]="true" [max]="5" [starTemplate]="t"></ngb-rating>
+                            <div class="text-muted mt-3 mb-0 testimonials-wrapper__testimonial"
+                                 style="font-size: .75rem;">
+                                <b>Positive</b>: Professionalism, Quality, Responsiveness, Value<br /><br />
+                                Impressive, very quick, very honest, you can't go wrong. Very recommended, for the first time in decades , I had no stress shipping, great job AMIR RAHMAN, please keep up the great work.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card testimonials-wrapper">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div class="img_name"><span>E</span></div>
+                                <div class="d-flex flex-column">
+                                    <h6 class="mb-0">Emi M</h6>
+                                    <small class="text-muted">January 6, 2020</small>
+                                </div>
+                                <div class="google_g_logo"><img src="assets/img/google_g_logo.png" alt="google_g_logo">
+                                </div>
+                            </div>
+                            <ngb-rating [rate]="5" [readonly]="true" [max]="5" [starTemplate]="t"></ngb-rating>
+                            <div class="text-muted mt-3 mb-0 testimonials-wrapper__testimonial"
+                                 style="font-size: .75rem;">
+                                <b>Positive</b>: Professionalism, Value<br /><br />
+                                Excellent service, i got my shipment in 4 days only.
+                                Excellent communication with Mr.Amer Rhman .
+                                Definitely will use it again next year.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-9">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card testimonials-wrapper">
-            <div class="card-body ">
-              <div class="d-flex justify-content-between">
-                <div class="img_name"><span>K</span></div>
-                <div class="d-flex flex-column">
-                  <h6 class="mb-0">Khizer Syed</h6>
-                  <small class="text-muted">December 13, 2020</small>
-                </div>
-                <div class="google_g_logo"><img src="assets/img/google_g_logo.png" alt="google_g_logo">
-                </div>
-              </div>
-              <ngb-rating [rate]="5" [readonly]="true" [max]="5" [starTemplate]="t"></ngb-rating>
-              <div class="text-muted mt-3 mb-0 testimonials-wrapper__testimonial"
-                   style="font-size: .75rem;">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at doloremque ea ex
-                explicabo in incidunt iure magnam perspiciatis quo, quos, ratione rem similique sit
-                soluta tempora totam voluptatem! Sed.Impressive, very quick, very honest, you can't go
-                wrong. Very recommended, for the first time in decades , I had no stress shipping, great
-                job AMIR RAHMAN, please keep up the great work .
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card testimonials-wrapper">
-            <div class="card-body">
-              <div class="d-flex justify-content-between">
-                <div class="img_name"><span>K</span></div>
-                <div class="d-flex flex-column">
-                  <h6 class="mb-0">Khizer Syed</h6>
-                  <small class="text-muted">December 13, 2020</small>
-                </div>
-                <div class="google_g_logo"><img src="assets/img/google_g_logo.png" alt="google_g_logo">
-                </div>
-              </div>
-              <ngb-rating [rate]="5" [readonly]="true" [max]="5" [starTemplate]="t"></ngb-rating>
-              <div class="text-muted mt-3 mb-0 testimonials-wrapper__testimonial"
-                   style="font-size: .75rem;">
-                Impressive, very quick, very honest, you can't go wrong. Very recommended, for the first
-                time in decades , I had no stress shipping, great job AMIR RAHMAN, please keep up the
-                great work .
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card testimonials-wrapper">
-            <div class="card-body">
-              <div class="d-flex justify-content-between">
-                <div class="img_name"><span>K</span></div>
-                <div class="d-flex flex-column">
-                  <h6 class="mb-0">Khizer Syed</h6>
-                  <small class="text-muted">December 13, 2020</small>
-                </div>
-                <div class="google_g_logo"><img src="assets/img/google_g_logo.png" alt="google_g_logo">
-                </div>
-              </div>
-              <ngb-rating [rate]="5" [readonly]="true" [max]="5" [starTemplate]="t"></ngb-rating>
-              <div class="text-muted mt-3 mb-0 testimonials-wrapper__testimonial"
-                   style="font-size: .75rem;">
-                Impressive, very quick, very honest, you can't go wrong. Very recommended, for the first
-                time in decades , I had no stress shipping, great job AMIR RAHMAN, please keep up the
-                great work .
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
+
+<!-- Map -->
 <section class="mt-5 find-us">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h1 class="text-center font-weight-light">Find Us</h1>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center font-weight-light">Find Us</h1>
+            </div>
+        </div>
     </div>
-  </div>
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.629507185274!2d-79.5959797842215!3d43.69746525758482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3a27fea4f0e5%3A0x603ecded380b4d33!2s286%20Attwell%20Dr%2C%20Etobicoke%2C%20ON%20M9W%205B2!5e0!3m2!1sen!2sca!4v1626718074296!5m2!1sen!2sca"
-    height="600" width="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.629507185274!2d-79.5959797842215!3d43.69746525758482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3a27fea4f0e5%3A0x603ecded380b4d33!2s286%20Attwell%20Dr%2C%20Etobicoke%2C%20ON%20M9W%205B2!5e0!3m2!1sen!2sca!4v1626718074296!5m2!1sen!2sca"
+        height="600" width="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 </section>
 
+<!-- Contact Us Footer Links -->
 <section class="container-fluid" style="background-color: #404040; color: #FFFFFF">
-  <div class="container py-5">
-    <div class="row">
-      <div class="col-md-4">
-        <h5 style="margin-left: 12px;">Contact Us</h5>
-        <div>
-          <table class="table table-borderless">
-            <tbody>
-            <tr>
-              <td style="vertical-align: middle"><i class="fas fa-envelope"></i></td>
-              <td>
-                <p class="mb-0">info@iffcargo.com</p>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: middle"><i class="fas fa-phone-alt"></i></td>
-              <td>
-                <p class="mb-0">(416) 798-4151</p>
-                <p class="mb-0">(877) 798-4151 (Toll free)</p>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: middle"><i class="fas fa-fax"></i></td>
-              <td>
-                <p class="mb-0">(416) 798-4155</p>
-                <p class="mb-0">(866) 798-4155 (Toll free fax)</p>
-              </td>
-            </tr>
-            </tbody>
-          </table>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-4 mb-5 mb-md-0">
+                <h5 style="text-align: center;">Get in Touch</h5>
+                <div>
+                    <table class="table table-borderless" style="width: auto; margin: 0 auto;">
+                        <tbody>
+                        <tr>
+                            <td style="vertical-align: middle"><i class="fas fa-envelope"></i></td>
+                            <td>
+                                <p class="mb-0">info@iffcargo.com</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: middle"><i class="fas fa-phone-alt"></i></td>
+                            <td>
+                                <p class="mb-0">(416) 798-4151</p>
+                                <p class="mb-0">(877) 798-4151 (Toll free)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: middle"><i class="fas fa-fax"></i></td>
+                            <td>
+                                <p class="mb-0">(416) 798-4155</p>
+                                <p class="mb-0">(866) 798-4155 (Toll free fax)</p>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5 mb-md-0">
+                <h5 style="text-align: center;">Office Hours</h5>
+                <table style="width: auto; margin: 0 auto;">
+                    <tr>
+                        <td class="pr-2">Mon - Fri</td>
+                        <td>9am - 5pm</td>
+                    </tr>
+                    <tr>
+                        <td class="pr-2">Sat - Sun</td>
+                        <td>Closed</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-4">
+                <h5 style="text-align: center;">Employee Portal</h5>
+                <table class="mb-3" style="width: auto; margin: 0 auto;">
+                    <tr>
+                        <td><a href="https://www.invoicing.iffcargo.com" target="_blank"
+                               class="button_link">Invoicing</a></td>
+                    </tr>
+                </table>
+                <h5 style="text-align: center;" class="mt-5">Shipping Forms</h5>
+                <table style="width: auto; margin: 0 auto;">
+                    <tr>
+                        <td><a href="https://www.cbsa-asfc.gc.ca/trade-commerce/tariff-tarif/menu-eng.html"
+                               target="_blank" class="button_link">Canada
+                            Customs Tariffs</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.cbp.gov/newsroom/publications/forms" target="_blank"
+                               class="button_link">US Customs Forms</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="https://usitc.gov/harmonized_tariff_information" target="_blank"
+                               class="button_link">US Customs Tariffs</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <h5>Hours</h5>
-        <table>
-          <tr>
-            <td class="pr-2">Mon - Fri</td>
-            <td>9am - 5pm</td>
-          </tr>
-          <tr>
-            <td class="pr-2">Sat - Sun</td>
-            <td>Closed</td>
-          </tr>
-        </table>
-      </div>
-      <div class="col-md-4">
-        <h5>Employee Portal</h5>
-        <table class="mb-3">
-          <tr>
-            <td><a routerLink="/login" class="text-white">Invoicing</a></td>
-          </tr>
-        </table>
-        <h5>Forms</h5>
-        <ul style="list-style: none" class="p-0 forms">
-          <li class="mb-1">
-            <a href="https://www.cbsa-asfc.gc.ca/trade-commerce/tariff-tarif/menu-eng.html" target="_blank">Canada
-              Customs Tariffs</a>
-          </li>
-          <li class="mb-1">
-            <a href="https://www.cbp.gov/newsroom/publications/forms" target="_blank">US Customs Forms</a>
-          </li>
-          <li class="mb-1">
-            <a href="https://usitc.gov/harmonized_tariff_information" target="_blank">US Customs Tariffs</a>
-          </li>
-        </ul>
-      </div>
     </div>
-  </div>
 </section>
+
+<!-- Copyright -->
 <section class="container-fluid" style="background-color: #303030; color: #FFFFFF">
-  <div class="container py-3">
-    <div class="row">
-      <div class="col">
-        <div class="copyright">
-            Copyright © {{ currentYear }} International Freight Forwarders | All Rights Reserved.
+    <div class="container py-3">
+        <div class="row">
+            <div class="col">
+                <div class="copyright">
+                    Copyright © {{ currentYear }} International Freight Forwarders | All Rights Reserved.
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
 
 <ng-template #t let-fill="fill">

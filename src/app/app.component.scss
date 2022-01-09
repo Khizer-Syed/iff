@@ -3,6 +3,10 @@
     background: linear-gradient(to bottom, #90dffe 0%, #38a3d1 100%);
     position: relative;
 
+    .carousel-heading {
+        font-size: 4rem;
+    }
+
     &__2::after {
         content: "";
         background: url('/../assets/img/clouds.png');
@@ -79,10 +83,8 @@
     }
 }
 
-.forms {
-    a {
-        color: #eee;
-    }
+.button_link {
+    color: #eee;
 }
 
 .testimonials {
@@ -152,9 +154,74 @@
     color: #FFDF00;
 }
 
-@media screen and (max-width: 392px) {
+@media screen and (max-width: 1200px) {
+    .brand-wrapper {
+        .sub-heading {
+            &::after {
+                right: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .brand-wrapper {
+        .carousel-heading {
+            font-size: 3rem;
+        }
+        .sub-heading {
+            &::after {
+                bottom: -25px;
+                right: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .brand-wrapper {
+        .carousel-heading {
+            font-size: 2rem;
+        }
+        .sub-heading {
+            &::after {
+                bottom: -33px;
+                right: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .brand-wrapper {
+        height: 60vh;
+        .carousel-heading {
+            font-size: 1rem;
+        }
+        .sub-heading {
+            &::after {
+                bottom: -28px;
+                right: 50px;
+                font-size: .75rem;
+            }
+        }
+
+    }
     .copyright {
         font-size: 80%;
+    }
+}
+
+@media screen and (max-width: 392px) {
+    .brand-wrapper {
+        .sub-heading {
+            &::after {
+                bottom: -24px;
+                right: 15px;
+                font-size: .6rem;
+            }
+        }
+
     }
 }
 
