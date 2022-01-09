@@ -71,7 +71,6 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        // this.carousel.pause();
     }
 
     getArrayControls(): FormGroup[] {
