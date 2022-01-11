@@ -6,15 +6,15 @@ import {environment} from '../../environments/environment';
 const apiUrl = environment.apiUrl;
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class QuoteService {
-  endpointUrl = `${apiUrl}/api/quote`;
+    endpointUrl = `${apiUrl}/api/quotes`;
 
-  constructor(public http: HttpClient) {
-  }
+    constructor(public http: HttpClient) {
+    }
 
-  addOne(value: any): Observable<void> {
-    return this.http.post<void>(this.endpointUrl, value);
-  }
+    sendQuote(value: any): Observable<void> {
+        return this.http.post<void>(this.endpointUrl, value);
+    }
 }

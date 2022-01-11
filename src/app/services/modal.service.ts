@@ -3,6 +3,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { take } from 'rxjs/operators';
 import {MeasuringGuideModalComponent} from '../components/measuring-guide-modal/measuring-guide-modal.component';
 import {SuccessModalComponent} from '../components/success-modal/success-modal.component';
+import {ErrorModalComponent} from '../components/error-modal/error-modal.component';
 
 @Injectable({
     providedIn: 'root'
@@ -22,5 +23,13 @@ export class ModalService {
         setTimeout(() => {
             modalRef.close();
         }, seconds);
+    }
+
+    openErrorModal(message: string = 'Unknown Error occurred') {
+        const modalRef = this.ngbModal.open(ErrorModalComponent, {centered: true, size: 'lg'});
+        modalRef.componentInstance.description = message;
+        modalRef.componentInstance.cancel.pipe(take(1)).subscribe(() => {
+            modalRef.close();
+        });
     }
 }
