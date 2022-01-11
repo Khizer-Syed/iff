@@ -19,7 +19,7 @@ export function app(): express.Express {
     const server = express();
     server.use(bodyParser.json());
     server.use(bodyParser.urlencoded({ extended: true }));
-    const distFolder = join(process.cwd(), 'dist/iff/browser');
+    const distFolder = process.env.NODE_ENV === 'production' ? join(process.cwd(), '../browser') : join(process.cwd(), 'dist/iff/browser');
     const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
 
     // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
@@ -48,7 +48,7 @@ export function app(): express.Express {
 }
 
 function run(): void {
-    const port = process.env.PORT || 4000;
+    const port = process.env.IFFCARGO_PORT || 5000;
 
     // Start up the Node server
     const server = app();
