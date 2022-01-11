@@ -645,10 +645,10 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <button type="submit" class="btn btn-secondary mr-3">
-                                    Request Quote
-                                </button>
-                                <button type="button" class="btn btn-danger" (click)="resetForm()">Reset Form</button>
+                                <app-loading-button [loading]="loading" (submitted)="requestQuote()">
+                                    <span>Request Quote</span>
+                                </app-loading-button>
+                                <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset Form</button>
                             </div>
                         </div>
                     </form>

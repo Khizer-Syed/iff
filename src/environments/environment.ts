@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:5000',
-  recaptchaSiteKey: '6Lf8e7YbAAAAAAXP-dYZjCV8nq5VNz2x14mbNo_3'
+  apiUrl: 'http://localhost:4000',
+  recaptchaSiteKey: '6LdkAAEeAAAAAGZaBWUeOmDWtmIbjWBH8YZO8Wuu'
 };
 
 /*

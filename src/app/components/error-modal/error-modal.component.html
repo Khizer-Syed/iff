@@ -1,0 +1,17 @@
+<div class="modal-header bg-danger">
+    <h4 class="modal-title text-capitalize"><i class="fa fa-exclamation-circle"></i> Error</h4>
+    <button type="button" class="btn" style="font-size: 1.5rem; padding: 0 8px;" aria-label="Close" (click)="dismiss()">
+        <i class="fas fa-times-circle"></i>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="mb-3" [innerHTML]="description"></div>
+</div>
+<div class="modal-footer">
+    <button type="button"
+            class="btn btn-outline-secondary"
+            (click)="dismiss()">
+        Close
+    </button>
+</div>
+

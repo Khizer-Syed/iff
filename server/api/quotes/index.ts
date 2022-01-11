@@ -1,28 +1,23 @@
-const express = require('express');
-const { pick } = require('lodash');
-const axios = require('axios');
-const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+import express, { Request, Response } from 'express';
 
 const router = express.Router();
+import { pick, get } from 'lodash';
+import axios from 'axios';
+import { sendEmail } from '../../lib/utils/email/send-email';
 
-router.post('', async (req, res, next) => {
+router.post('', async (req: Request, res: Response) => {
     try {
         const requestDetails = pick(req.body, ['name', 'email', 'company', 'phone', 'shippingInfo', 'items', 'token', 'totalVolumeWeight', 'totalActualWeight', 'hazardous', 'termsOfSale', 'termsOfSaleOther', 'unNumber', 'pageNumber', 'classNumber', 'packingGroup']);
-        if (validateQuote(requestDetails, next)) {
+        if (validateQuote(requestDetails, res)) {
             const params = new URLSearchParams();
             params.append('secret', process.env.G_CAPTCHA_SECRET);
             params.append('response', requestDetails.token);
             const {data} = await axios.post('https://www.google.com/recaptcha/api/siteverify', params);
             if (data.success) {
-                sgMail.sendMultiple({
-                    to: process.env.SUPERVISOR_EMAIL,
-                    from: process.env.ADMIN_EMAIL,
-                    subject: 'Quote Request',
-                    html: getQuoteRequestTemplate(requestDetails)
-                }).then(() => {
-                    res.send();
-                }).catch((e) => {
+                sendEmail(process.env.SUPERVISOR_EMAIL, [], 'Quote Request', getQuoteRequestTemplate(requestDetails))
+                    .then(() => {
+                        res.send();
+                    }).catch((e: Error) => {
                     res.status(400).send({errors: [{message: e}]});
                 });
             } else {
@@ -30,57 +25,62 @@ router.post('', async (req, res, next) => {
             }
         }
     } catch (e) {
+        console.error(e);
         res.status(400).send({errors: [{message: e}]});
     }
 });
 
-const validateQuote = (requestDetails, res) => {
+const validateQuote = (requestDetails: any, res: express.Response) => {
     const shippingInfo = pick(requestDetails.shippingInfo, ['origin', 'destination', 'shippingMode', 'shippingVolume', 'containerType', 'containerSize']);
     const origin = pick(shippingInfo.origin, ['from', 'pickupPoint']);
     const destination = pick(shippingInfo.destination, ['to', 'deliveryPoint']);
 
-    const validateItems = (items) => validateArrayObject(items, ['length', 'width', 'height', 'weight', 'qty', 'dimensionalUnit', 'weightUnit', 'volumeWeight', 'actualWeight'], res);
+    const validateItems = (items: any) => validateArrayObject(items, ['length', 'width', 'height', 'weight', 'qty', 'dimensionalUnit', 'weightUnit', 'volumeWeight', 'actualWeight'], res);
     if (validateObject(requestDetails, ['name', 'email', 'phone', 'token'], res) &&
         validateEnumField('shippingMode', shippingInfo.shippingMode, ['Air', 'Ocean', 'Land'], res) &&
         validateObject(origin, ['from', 'pickupPoint'], res) &&
-        validateObject(destination, ['to', 'deliveryPoint'], res) && validateEnumField('hazardous', requestDetails.hazardous, ['Yes', 'No'], res)) {
-        if ((shippingInfo.shippingMode === 'Ocean' || shippingInfo.shippingMode === 'Land') && validateEnumField('shippingVolume', shippingInfo.shippingVolume, ['LCL', 'FCL'], res)) {
+        validateObject(destination, ['to', 'deliveryPoint'], res) &&
+        validateEnumField('hazardous', requestDetails.hazardous, ['Yes', 'No'], res)) {
+        if ((shippingInfo.shippingMode === 'Ocean' || shippingInfo.shippingMode === 'Land') &&
+            validateEnumField('shippingVolume', shippingInfo.shippingVolume, ['LCL', 'FCL'], res)) {
             return (shippingInfo.shippingVolume === 'LCL' && validateItems(requestDetails.items) && validateObject(requestDetails, ['totalVolumeWeight', 'totalActualWeight'], res)) ||
                 (shippingInfo.shippingVolume === 'FCL' && validateEnumField('containerType', shippingInfo.containerType, ['Dry', 'Refrigerated'], res) &&
-                    validateEnumField('containerSize', shippingInfo.containerSize, ['20 ft.', '40 ft.', '40 ft. high-cube', '45 ft.'], res));
+                    validateEnumField('containerSize',
+                        shippingInfo.containerSize, ['20 ft.', '40 ft.', '40 ft. high-cube', '45 ft.'], res));
         } else {
             return shippingInfo.shippingMode === 'Air' && validateItems(requestDetails.items) && validateObject(requestDetails, ['totalVolumeWeight', 'totalActualWeight'], res);
         }
     }
+    return false;
 };
 
-function validateArrayObject(objArray, arrProps, res, name = '') {
+function validateArrayObject(objArray: any, arrProps: string[], res: express.Response, name = '') {
     let message = '';
     if (!objArray.length) {
-        res.status(400).send({ errors: [{ message: `Missing parameters: ${[name].join(', ')}` }]});
+        res.status(400).send({errors: [{message: `Missing parameters: ${[name].join(', ')}`}]});
         return false;
     }
-    objArray.forEach((obj, index) => {
-        const missing = [];
-        arrProps.forEach(prop => {
+    objArray.forEach((obj: any, index: number) => {
+        const missing: string[] = [];
+        arrProps.forEach((prop: string) => {
             const val = get(obj, prop);
             if (val === undefined || val === null || val === '') {
                 missing.push(prop);
             }
         });
         if (missing.length) {
-            message += `Missing parameters at ${name} position ${index + 1}: ${missing.join(', ')}.`
+            message += `Missing parameters at ${name} position ${index + 1}: ${missing.join(', ')}.`;
         }
     });
     if (message) {
-        res.status(400).send({ errors: [{ message: `Missing parameters: ${[name].join(', ')}`}]});
+        res.status(400).send({errors: [{message: `Missing parameters: ${[name].join(', ')}`}]});
         return false;
     }
     return true;
 }
 
-function validateObject(obj, arrProps, res) {
-    const missing = [];
+function validateObject(obj: any, arrProps: string[], res: express.Response) {
+    const missing: string[] = [];
     arrProps.forEach(prop => {
         const val = get(obj, prop);
         if (val === undefined || val === null || val === '') {
@@ -88,24 +88,24 @@ function validateObject(obj, arrProps, res) {
         }
     });
     if (missing.length) {
-        res.status(400).send({ errors: [{ message: `Missing parameters: ${[missing].join(', ')}`}]});
+        res.status(400).send({errors: [{message: `Missing parameters: ${[missing].join(', ')}`}]});
         return false;
     }
     return true;
 }
 
 
-const validateEnumField = (fieldName, val, allowedValues, res) => {
+const validateEnumField = (fieldName: string, val: string, allowedValues: string[], res: express.Response) => {
     if (!allowedValues.includes(val)) {
-        res.status(400).send({ errors: [{ message: `Invalid value (${val}) provided for field ${fieldName}`}]});
+        res.status(400).send({errors: [{message: `Invalid value (${val}) provided for field ${fieldName}`}]});
         return false;
     }
     return true;
 };
 
-function getQuoteRequestTemplate(requestDetails) {
+function getQuoteRequestTemplate(requestDetails: any) {
     const {shippingInfo} = requestDetails;
-    const tdWithCustomStyle = (val) => `<td style="border: 1px solid #eee; padding: 4px 8px;">${val}</td>`;
+    const tdWithCustomStyle = (val: string) => `<td style="border: 1px solid #eee; padding: 4px 8px;">${val}</td>`;
     const totalWeightRow = () => `
         <tr>
             ${tdWithCustomStyle('Total Volume Weight')}
@@ -180,7 +180,7 @@ function getQuoteRequestTemplate(requestDetails) {
                 </tr>
             </thead>
             <tbody>
-                ${requestDetails.items.map(item => `
+                ${requestDetails.items.map((item: any) => `
                 <tr>
                     ${tdWithCustomStyle(`${item.length.toFixed(2)} ${item.dimensionalUnit} * ${item.width.toFixed(2)} ${item.dimensionalUnit} * ${item.height.toFixed(2)} ${item.dimensionalUnit}`)}
                     ${tdWithCustomStyle(item.volumeWeight)}
@@ -209,7 +209,7 @@ function getQuoteRequestTemplate(requestDetails) {
     `);
 }
 
-function addDisclaimer(template) {
+function addDisclaimer(template: string) {
     return `
             <div style="background: #f3f3f3;">
                 <div style="margin: 0 auto; max-width: 600px; padding: 16px; font-size: 16px; background: #ffffff;">
@@ -227,4 +227,4 @@ function addDisclaimer(template) {
             </div>`;
 }
 
-module.exports = router;
+export { router as quotesRouter };

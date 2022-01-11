@@ -15,6 +15,7 @@ import {QuoteService} from './services/quote.service';
 import {ModalService} from './services/modal.service';
 import {nonZeroValidator} from './validators/non-zero.validator';
 import {NgbCarousel} from '@ng-bootstrap/ng-bootstrap';
+import {HttpErrorResponse} from '@angular/common/http';
 
 @Component({
     selector: 'app-root',
@@ -34,6 +35,7 @@ export class AppComponent implements OnInit {
     containerSize = ContainerSize;
     prompt = Prompt;
     termsOfSale = TermsOfSale;
+    loading = false;
 
     get f(): any {
         return this.customerQuote.controls;
@@ -178,11 +180,34 @@ export class AppComponent implements OnInit {
 
     requestQuote(): void {
         if (this.customerQuote.valid) {
-            this.quoteService.addOne(this.customerQuote.value)
+            this.loading = true;
+            this.quoteService.sendQuote(this.customerQuote.value)
                 .subscribe(() => {
+                    this.loading = false;
                     this.modalService.openDismissibleSuccessModal();
                     this.resetForm();
-                });
+                }, errorObj => {
+                let message = '';
+                if (errorObj instanceof HttpErrorResponse) {
+                    message += `<p>`;
+                    if (errorObj.error.errors && errorObj.error.errors.length) {
+                        // server-side error
+                        errorObj.error.errors.forEach((x: any) => {
+                            message += x.message + '<br />';
+                        });
+                    } else if (errorObj.status === 0) {
+                        message = `<strong>500</strong> - Internal Server Error <br />Application server is down.<br /> Please wait until the server comes back up or contact Admin.`;
+                    } else {
+                        message = errorObj.message;
+                    }
+                    message += '</p>';
+                }
+
+                if (message) {
+                    this.modalService.openErrorModal(message);
+                }
+                this.loading = false;
+            });
         }
     }
 
