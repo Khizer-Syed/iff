@@ -10,7 +10,7 @@
         "lint": "ng lint",
         "dev:ssr": "ng run iff:serve-ssr",
         "serve:ssr": "node dist/iff/server/main.js",
-        "build:ssr": "ng build && ng run iff:server",
+        "build:ssr": "npm run build && ng run iff:server",
         "prerender": "ng run iff:prerender"
     },
     "engines": {
