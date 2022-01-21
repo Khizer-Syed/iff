@@ -1,17 +1,16 @@
 {
     "name": "iff",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "type": "commonjs",
     "scripts": {
-        "start": "cd server && node server.js",
-        "start-prod": "cd server && pm2 start main.js --name iffcargo",
+        "start": "cd iffcargo/server && node server.js",
+        "start-prod": "cd server && pm2 start server.js --name iffcargo",
         "client": "ng serve --open --port 4300",
-        "build": "ng build --configuration production --aot",
+        "build-client": "rm -rf iffcargo/ui && ng build --configuration production --aot",
+        "build-server": "rm -rf iffcargo/server && cd server && tsc",
+        "build": "npm run build-client && npm run build-server",
         "lint": "ng lint",
-        "dev:ssr": "ng run iff:serve-ssr",
-        "serve:ssr": "node dist/iff/server/main.js",
-        "build:ssr": "npm run build && ng run iff:server",
-        "prerender": "ng run iff:prerender"
+        "watch": "rm -rf iffcargo/server && cd server && tsc -w"
     },
     "engines": {
         "node": "16.x",
@@ -19,7 +18,6 @@
     },
     "private": true,
     "dependencies": {
-        "@nguniversal/express-engine": "^13.0.1",
         "axios": "^0.24.0",
         "body-parser": "^1.19.1",
         "express": "^4.17.1",

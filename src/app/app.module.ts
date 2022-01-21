@@ -27,7 +27,7 @@ import {ErrorModalComponent} from './components/error-modal/error-modal.componen
         LoadingButtonComponent
     ],
     imports: [
-        BrowserModule.withServerTransition({ appId: 'serverApp' }),
+        BrowserModule,
         BrowserAnimationsModule,
         AppRoutingModule,
         ReactiveFormsModule,
