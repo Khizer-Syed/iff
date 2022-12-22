@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {FormArray, FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {UntypedFormArray, UntypedFormBuilder, UntypedFormGroup, Validators} from '@angular/forms';
 import {
     ContainerSize,
     ContainerType,
@@ -25,7 +25,7 @@ import {HttpErrorResponse} from '@angular/common/http';
 export class AppComponent implements OnInit {
     @ViewChild('carousel', {static: true}) carousel: NgbCarousel;
     currentYear = new Date().getFullYear();
-    customerQuote: FormGroup;
+    customerQuote: UntypedFormGroup;
     shippingPoint = ShippingPoint;
     shippingMode = ShippingMode;
     shippingVolume = ShippingVolume;
@@ -41,11 +41,11 @@ export class AppComponent implements OnInit {
         return this.customerQuote.controls;
     }
 
-    get c(): FormArray {
-        return this.f.items as FormArray;
+    get c(): UntypedFormArray {
+        return this.f.items as UntypedFormArray;
     }
 
-    constructor(private fb: FormBuilder, private quoteService: QuoteService, private modalService: ModalService) {
+    constructor(private fb: UntypedFormBuilder, private quoteService: QuoteService, private modalService: ModalService) {
         this.customerQuote = this.fb.group({
             name: ['', Validators.required],
             company: [''],
@@ -75,8 +75,8 @@ export class AppComponent implements OnInit {
     ngOnInit(): void {
     }
 
-    getArrayControls(): FormGroup[] {
-        return this.c.controls as FormGroup[];
+    getArrayControls(): UntypedFormGroup[] {
+        return this.c.controls as UntypedFormGroup[];
     }
 
     addControl(): void {
@@ -99,7 +99,7 @@ export class AppComponent implements OnInit {
     }
 
     changeShippingMode(value: ShippingMode): void {
-        const shippingInfo = this.customerQuote.get('shippingInfo') as FormGroup;
+        const shippingInfo = this.customerQuote.get('shippingInfo') as UntypedFormGroup;
         if (value === ShippingMode.Ocean || value === ShippingMode.Land) {
             shippingInfo.addControl('shippingVolume', this.fb.control(ShippingVolume.LCL, [Validators.required]));
         } else {
@@ -114,7 +114,7 @@ export class AppComponent implements OnInit {
     }
 
     checkToAddItems(): boolean {
-        const shippingInfo = this.customerQuote.get('shippingInfo') as FormGroup;
+        const shippingInfo = this.customerQuote.get('shippingInfo') as UntypedFormGroup;
         const shippingMode = shippingInfo.get('shippingMode')?.value;
         if (shippingMode) {
             return shippingMode === ShippingMode.Air ||
@@ -125,7 +125,7 @@ export class AppComponent implements OnInit {
     }
 
     changeShippingVolume(value: ShippingVolume): void {
-        const shippingInfo = this.customerQuote.get('shippingInfo') as FormGroup;
+        const shippingInfo = this.customerQuote.get('shippingInfo') as UntypedFormGroup;
         if (value === ShippingVolume.FCL) {
             shippingInfo.addControl('containerType', this.fb.control(ContainerType.Dry, [Validators.required]));
             shippingInfo.addControl('containerSize', this.fb.control(ContainerSize['20ft'], [Validators.required]));
@@ -235,7 +235,7 @@ export class AppComponent implements OnInit {
     }
 
     validateItem(): boolean {
-        const shippingInfo = (this.customerQuote.get('shippingInfo') as FormGroup)?.value;
+        const shippingInfo = (this.customerQuote.get('shippingInfo') as UntypedFormGroup)?.value;
         return (shippingInfo &&
             (shippingInfo.shippingMode === ShippingMode.Air ||
                 ((shippingInfo.shippingMode === ShippingMode.Ocean || shippingInfo.shippingMode === ShippingMode.Land) &&

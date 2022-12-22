@@ -135,8 +135,8 @@
                     <form [formGroup]="customerQuote" (ngSubmit)="requestQuote()">
                         <fieldset>
                             <legend>Customer Information</legend>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
+                            <div class="row">
+                                <div class="col-md-6">
                                     <label for="name"><span class="text-danger">*</span> Name</label>
                                     <input type="text"
                                            [ngClass]="{'is-invalid': !customerQuote.controls.name.valid && customerQuote.controls.name.touched}"
@@ -146,12 +146,12 @@
                                         Please enter a valid name.
                                     </div>
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div class="col-md-6">
                                     <label for="company">Company</label>
                                     <input type="text" class="form-control" id="company"
                                            placeholder="Optional" formControlName="company">
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div class="col-md-6">
                                     <label for="email"><span class="text-danger">*</span> Email</label>
                                     <input type="email" class="form-control" id="email" placeholder="Email"
                                            [ngClass]="{'is-invalid': !customerQuote.controls.email.valid && customerQuote.controls.email.touched}"
@@ -160,7 +160,7 @@
                                         Please enter a valid email.
                                     </div>
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div class="col-md-6">
                                     <label for="phone"><span class="text-danger">*</span> Phone</label>
                                     <input type="tel" class="form-control" id="phone" placeholder="Phone #"
                                            [ngClass]="{'is-invalid': !customerQuote.controls.phone.valid && customerQuote.controls.phone.touched}"
@@ -175,10 +175,10 @@
                         <fieldset>
                             <legend>Shipping Information</legend>
                             <ng-container formGroupName="shippingInfo">
-                                <div class="form-row">
+                                <div class="row">
                                     <div class="col-md-6" formGroupName="origin">
                                         <div class="row">
-                                            <div class="form-group col-12">
+                                            <div class="col-12">
                                                 <label for="from"><span class="text-danger">*</span> From</label>
                                                 <input type="text" class="form-control" id="from" placeholder="Origin"
                                                        [ngClass]="{'is-invalid': !customerQuote.get(['shippingInfo', 'origin', 'from'])?.valid && customerQuote.get(['shippingInfo', 'origin', 'from'])?.touched}"
@@ -187,18 +187,18 @@
                                                     Please enter a valid pickup address.
                                                 </div>
                                             </div>
-                                            <div class="form-group col-12">
-                                                <div class="custom-control custom-radio custom-control-inline">
+                                            <div class="col-12 mt-2">
+                                                <div class="form-check form-check-inline">
                                                     <input type="radio" id="fromDoor" formControlName="pickupPoint"
-                                                           class="custom-control-input" [value]="shippingPoint.Door">
-                                                    <label class="custom-control-label font-weight-light"
+                                                           class="form-check-input" [value]="shippingPoint.Door">
+                                                    <label class="form-check-label font-weight-light"
                                                            for="fromDoor">Door</label>
                                                 </div>
-                                                <div class="custom-control custom-radio custom-control-inline">
+                                                <div class="form-check form-check-inline">
                                                     <input type="radio" id="fromTerminal" formControlName="pickupPoint"
                                                            [value]="shippingPoint.TerminalOrPort"
-                                                           class="custom-control-input">
-                                                    <label class="custom-control-label font-weight-light"
+                                                           class="orm-check-input">
+                                                    <label class="form-check-label font-weight-light"
                                                            for="fromTerminal">Terminal/Port</label>
                                                 </div>
                                             </div>
@@ -207,7 +207,7 @@
                                     </div>
                                     <div class="col-md-6" formGroupName="destination">
                                         <div class="row">
-                                            <div class="form-group col-12">
+                                            <div class="col-12">
                                                 <label for="to"><span class="text-danger">*</span> To</label>
                                                 <input type="text" class="form-control" id="to"
                                                        [ngClass]="{'is-invalid': !customerQuote.get(['shippingInfo', 'destination', 'to'])?.valid && customerQuote.get(['shippingInfo', 'destination', 'to'])?.touched}"
@@ -216,17 +216,17 @@
                                                     Please enter a valid destination address.
                                                 </div>
                                             </div>
-                                            <div class="form-group col-12">
-                                                <div class="custom-control custom-radio custom-control-inline">
+                                            <div class="col-12 mt-2">
+                                                <div class="form-check form-check-inline">
                                                     <input type="radio" id="toDoor" formControlName="deliveryPoint"
-                                                           class="custom-control-input" [value]="shippingPoint.Door">
-                                                    <label class="custom-control-label font-weight-light" for="toDoor">Door</label>
+                                                           class="form-check-input" [value]="shippingPoint.Door">
+                                                    <label class="form-check-label font-weight-light" for="toDoor">Door</label>
                                                 </div>
-                                                <div class="custom-control custom-radio custom-control-inline">
+                                                <div class="form-check form-check-inline">
                                                     <input type="radio" id="toTerminal" formControlName="deliveryPoint"
-                                                           class="custom-control-input"
+                                                           class="form-check-input"
                                                            [value]="shippingPoint.TerminalOrPort">
-                                                    <label class="custom-control-label font-weight-light"
+                                                    <label class="form-check-label font-weight-light"
                                                            for="toTerminal">Terminal/Port</label>
                                                 </div>
                                             </div>
@@ -237,24 +237,24 @@
                                 <div class="row">
                                     <div class="col">
                                         <label><span class="text-danger">*</span> Shipping Mode: &nbsp;</label>
-                                        <div class="custom-control custom-radio custom-control-inline">
+                                        <div class="form-check form-check-inline">
                                             <input type="radio" id="air" formControlName="shippingMode"
-                                                   class="custom-control-input" [value]="shippingMode.Air"
+                                                   class="form-check-input" [value]="shippingMode.Air"
                                                    (ngModelChange)="changeShippingMode($event)">
-                                            <label class="custom-control-label font-weight-light" for="air">Air</label>
+                                            <label class="form-check-label font-weight-light" for="air">Air</label>
                                         </div>
-                                        <div class="custom-control custom-radio custom-control-inline">
+                                        <div class="form-check form-check-inline">
                                             <input type="radio" id="ocean" formControlName="shippingMode"
-                                                   class="custom-control-input" [value]="shippingMode.Ocean"
+                                                   class="form-check-input" [value]="shippingMode.Ocean"
                                                    (ngModelChange)="changeShippingMode($event)">
-                                            <label class="custom-control-label font-weight-light"
+                                            <label class="form-check-label font-weight-light"
                                                    for="ocean">Ocean</label>
                                         </div>
-                                        <div class="custom-control custom-radio custom-control-inline">
+                                        <div class="form-check form-check-inline">
                                             <input type="radio" id="land" formControlName="shippingMode"
-                                                   class="custom-control-input" [value]="shippingMode.Land"
+                                                   class="form-check-input" [value]="shippingMode.Land"
                                                    (ngModelChange)="changeShippingMode($event)">
-                                            <label class="custom-control-label font-weight-light"
+                                            <label class="form-check-label font-weight-light"
                                                    for="land">Land</label>
                                         </div>
                                     </div>
@@ -265,20 +265,20 @@
                                         <div class="col-12">
                                             <label class="mb-0"><span class="text-danger">*</span> Shipping Volume:
                                                 &nbsp;</label>
-                                            <div class="custom-control custom-radio custom-control-inline">
+                                            <div class="form-check form-check-inline">
                                                 <input type="radio" id="lcl"
                                                        (ngModelChange)="changeShippingVolume($event)"
-                                                       formControlName="shippingVolume" class="custom-control-input"
+                                                       formControlName="shippingVolume" class="form-check-input"
                                                        [value]="shippingVolume.LCL">
-                                                <label class="custom-control-label font-weight-light" for="lcl">Loose
+                                                <label class="form-check-label font-weight-light" for="lcl">Loose
                                                     Container Load</label>
                                             </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
+                                            <div class="form-check form-check-inline">
                                                 <input type="radio" id="fcl"
                                                        (ngModelChange)="changeShippingVolume($event)"
-                                                       formControlName="shippingVolume" class="custom-control-input"
+                                                       formControlName="shippingVolume" class="form-check-input"
                                                        [value]="shippingVolume.FCL">
-                                                <label class="custom-control-label font-weight-light" for="fcl">Full
+                                                <label class="form-check-label font-weight-light" for="fcl">Full
                                                     Container Load</label>
                                             </div>
                                         </div>
@@ -294,24 +294,24 @@
                                         <div class="form-group col-md-3">
                                             <div class="mb-2"><label><span class="text-danger">*</span> Container
                                                 Type</label></div>
-                                            <div class="custom-control custom-radio custom-control-inline">
+                                            <div class="form-check form-check-inline">
                                                 <input type="radio" id="dry" formControlName="containerType"
-                                                       class="custom-control-input" [value]="containerType.Dry">
-                                                <label class="custom-control-label font-weight-light"
+                                                       class="form-check-input" [value]="containerType.Dry">
+                                                <label class="form-check-label font-weight-light"
                                                        for="dry">Dry</label>
                                             </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
+                                            <div class="form-check form-check-inline">
                                                 <input type="radio" id="refrigerated" formControlName="containerType"
-                                                       class="custom-control-input"
+                                                       class="form-check-input"
                                                        [value]="containerType.Refrigerated">
-                                                <label class="custom-control-label font-weight-light"
+                                                <label class="form-check-label font-weight-light"
                                                        for="refrigerated">Refrigerated</label>
                                             </div>
                                         </div>
                                         <div class="form-group col-md-3">
                                             <label for="containerSize"><span class="text-danger">*</span> Container
                                                 Size</label>
-                                            <select id="containerSize" class="custom-control custom-select"
+                                            <select id="containerSize" class="form-select"
                                                     formControlName="containerSize">
                                                 <option [value]="containerSize['20ft']">20 ft.</option>
                                                 <option [value]="containerSize['40ft']">40 ft.</option>
@@ -382,25 +382,25 @@
                                                             </div>
                                                             <div class="col d-flex align-items-end">
                                                                 <div
-                                                                    class="custom-control custom-radio custom-control-inline mb-3">
+                                                                    class="form-check form-check-inline mb-3">
                                                                     <input type="radio" id="cm"
                                                                            formControlName="dimensionalUnit"
-                                                                           class="custom-control-input"
+                                                                           class="form-check-input"
                                                                            (ngModelChange)="calculateVolumeWeight(i)"
                                                                            [value]="dimensionalUnit.cm">
                                                                     <label
-                                                                        class="custom-control-label font-weight-light"
+                                                                        class="form-check-label font-weight-light"
                                                                         for="cm">cm</label>
                                                                 </div>
                                                                 <div
-                                                                    class="custom-control custom-radio custom-control-inline mb-3">
+                                                                    class="form-check form-check-inline mb-3">
                                                                     <input type="radio" id="inch"
                                                                            formControlName="dimensionalUnit"
-                                                                           class="custom-control-input"
+                                                                           class="form-check-input"
                                                                            (ngModelChange)="calculateVolumeWeight(i)"
                                                                            [value]="dimensionalUnit.inch">
                                                                     <label
-                                                                        class="custom-control-label font-weight-light"
+                                                                        class="form-check-label font-weight-light"
                                                                         for="inch">inch</label>
                                                                 </div>
                                                             </div>
@@ -435,25 +435,25 @@
                                                             </div>
                                                             <div class="col-md-3 d-flex align-items-end">
                                                                 <div
-                                                                    class="custom-control custom-radio custom-control-inline">
+                                                                    class="form-check form-check-inline">
                                                                     <input type="radio" id="kgs"
                                                                            formControlName="weightUnit"
-                                                                           class="custom-control-input"
+                                                                           class="form-check-input"
                                                                            (ngModelChange)="calculateWeight(i)"
                                                                            [value]="weightUnit.kgs">
                                                                     <label
-                                                                        class="custom-control-label font-weight-light"
+                                                                        class="form-check-label font-weight-light"
                                                                         for="kgs">kgs</label>
                                                                 </div>
                                                                 <div
-                                                                    class="custom-control custom-radio custom-control-inline">
+                                                                    class="form-check form-check-inline">
                                                                     <input type="radio" id="lbs"
                                                                            formControlName="weightUnit"
-                                                                           class="custom-control-input"
+                                                                           class="form-check-input"
                                                                            (ngModelChange)="calculateWeight(i)"
                                                                            [value]="weightUnit.lbs">
                                                                     <label
-                                                                        class="custom-control-label font-weight-light"
+                                                                        class="form-check-label font-weight-light"
                                                                         for="lbs">lbs</label>
                                                                 </div>
                                                             </div>
@@ -546,7 +546,7 @@
                                 <div class="col-md-3">
                                     <label for="termsOfSale">Terms of Sale</label>
                                     <select id="termsOfSale" formControlName="termsOfSale"
-                                            class="custom-select custom-control"
+                                            class="form-select"
                                             (ngModelChange)="changeTermsOfSale($event)">
                                         <option value="">Don't know</option>
                                         <option [value]="termsOfSale.ExWorks">Ex Works</option>
@@ -566,19 +566,19 @@
                                     <label>Is your item Hazardous?</label>
                                 </div>
                                 <div class="col">
-                                    <div class="custom-control custom-radio custom-control-inline">
+                                    <div class="form-check form-check-inline">
                                         <input type="radio" id="no"
                                                (ngModelChange)="changeHazardRating($event)"
-                                               formControlName="hazardous" class="custom-control-input"
+                                               formControlName="hazardous" class="form-check-input"
                                                [value]="prompt.No">
-                                        <label class="custom-control-label font-weight-light" for="no">No</label>
+                                        <label class="form-check-label font-weight-light" for="no">No</label>
                                     </div>
-                                    <div class="custom-control custom-radio custom-control-inline">
+                                    <div class="form-check form-check-inline">
                                         <input type="radio" id="yes"
                                                (ngModelChange)="changeHazardRating($event)"
-                                               formControlName="hazardous" class="custom-control-input"
+                                               formControlName="hazardous" class="form-check-input"
                                                [value]="prompt.Yes">
-                                        <label class="custom-control-label font-weight-light" for="yes">Yes</label>
+                                        <label class="form-check-label font-weight-light" for="yes">Yes</label>
                                     </div>
                                 </div>
                             </div>
@@ -771,7 +771,7 @@
             <div class="col-md-4 mb-5 mb-md-0">
                 <h5 style="text-align: center;">Get in Touch</h5>
                 <div>
-                    <table class="table table-borderless" style="width: auto; margin: 0 auto;">
+                    <table class="table table-borderless" style="width: auto; margin: 0 auto; color: #FFFFFF;">
                         <tbody>
                         <tr>
                             <td style="vertical-align: middle"><i class="fas fa-envelope"></i></td>
