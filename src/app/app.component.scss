@@ -1,7 +1,23 @@
+//.header {
+//    height: 100vh;
+//    background: linear-gradient(to bottom, #90dffe 0%, #38a3d1 100%);
+//    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+//}
+
 .brand-wrapper {
     height: 80vh;
     background: linear-gradient(to bottom, #90dffe 0%, #38a3d1 100%);
     position: relative;
+
+    .navbar {
+        &-collapse {
+            .navbar-nav {
+                .nav-link {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
 
     .carousel-heading {
         font-size: 4rem;

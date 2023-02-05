@@ -1,74 +1,49 @@
-<ngb-carousel #carousel pauseOnHover="true" pauseOnFocus="true" interval="10000">
-    <ng-template ngbSlide>
-        <div class="container-fluid brand-wrapper">
-            <div class="brand-wrapper__2 d-flex flex-column justify-content-between h-100 w-100">
-                <nav class="navbar">
-                    <a class="navbar-brand"><img src="assets/img/logo.png" height="40px" width="100px" alt="IFF Cargo"></a>
-                </nav>
-                <div class="row">
-                    <div class="col-12">
-                        <h1 class="text-center text-white carousel-heading">NEED RELIABLE AND FAST SHIPPING?</h1>
-                    </div>
-                    <div class="col-12">
-                        <h1 class="text-center text-white carousel-heading">WE GOT YOU COVERED</h1>
-                    </div>
+<section class="header">
+    <div class="container-fluid d-flex flex-column justify-content-between brand-wrapper">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="/"><img src="assets/img/logo.png" height="40px" width="100px" alt="IFF Cargo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quote">Quote</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h1 class="text-center text-white carousel-heading">LARGE ENOUGH TO HANDLE,</h1>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <img src="assets/img/aeroplane.png" alt="Aeroplane" class="animate-right" style="width: 100%;">
-                    </div>
+                <div class="col-12">
+                    <h1 class="text-center text-white sub-heading carousel-heading">SMALL ENOUGH TO CARE</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <img src="assets/img/forklift.png" alt="ForkLift" class="animate-right" style="width: 100%;">
+                </div>
+                <div class="col-9">
+                    <img src="assets/img/truck.png" alt="Truck" class="animate-left" style="width: 100%;">
                 </div>
             </div>
         </div>
-    </ng-template>
+    </div>
+</section>
 
-    <ng-template ngbSlide>
-        <div class="container-fluid d-flex flex-column justify-content-between brand-wrapper">
-            <nav class="navbar">
-                <a class="navbar-brand"><img src="assets/img/logo.png" height="40px" width="100px" alt="IFF Cargo"></a>
-            </nav>
-            <div class="container">
-                <div class="row mb-5">
-                    <div class="col-12">
-                        <h1 class="text-center text-white carousel-heading">LARGE ENOUGH TO HANDLE,</h1>
-                    </div>
-                    <div class="col-12">
-                        <h1 class="text-center text-white sub-heading carousel-heading">SMALL ENOUGH TO CARE</h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-3">
-                        <img src="assets/img/forklift.png" alt="ForkLift" class="animate-right" style="width: 100%;">
-                    </div>
-                    <div class="col-9">
-                        <img src="assets/img/truck.png" alt="Truck" class="animate-left" style="width: 100%;">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </ng-template>
-
-
-    <ng-template ngbSlide>
-        <div class="container-fluid d-flex flex-column justify-content-between brand-wrapper">
-            <nav class="navbar">
-                <a class="navbar-brand"><img src="assets/img/logo.png" height="40px" width="100px" alt="IFF Cargo"></a>
-            </nav>
-            <div class="container">
-                <div class="row">
-                    <div class="col-6">
-                        <img src="assets/img/ship.png" alt="Ship" class="animate-right" style="width: 100%;">
-                    </div>
-                    <div class="col-6">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </ng-template>
-</ngb-carousel>
-
-<section class="container my-5 services">
+<section class="container my-5 services" id="services">
     <div class="row mb-5">
         <div class="col">
             <h1 class="text-center font-weight-light">OUR SERVICES</h1>
@@ -114,7 +89,7 @@
         </div>
     </div>
 </section>
-<section class="container my-5 quotes">
+<section class="container my-5 quotes" id="quote">
     <div class="row">
         <div class="col">
             <h1 class="text-center font-weight-light">REQUEST A QUOTE</h1>
@@ -660,7 +635,7 @@
 </section>
 
 <!-- Testimonials -->
-<section class="container my-5 testimonials">
+<section class="container my-5 testimonials" id="testimonials">
     <div class="row">
         <div class="col">
             <h1 class="text-center font-weight-light">See what people have to say about us</h1>
@@ -751,7 +726,7 @@
 </section>
 
 <!-- Map -->
-<section class="mt-5 find-us">
+<section class="mt-5 find-us" id="contact">
     <div class="container">
         <div class="row">
             <div class="col">
