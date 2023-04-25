@@ -45,8 +45,7 @@ import {ErrorModalComponent} from './components/error-modal/error-modal.componen
             } as RecaptchaSettings
         }
     ],
-    bootstrap: [AppComponent],
-    entryComponents: [SuccessModalComponent]
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }
