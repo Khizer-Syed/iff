@@ -6,7 +6,7 @@ name: DigitalOcean-CI
 on:
     # Triggers the workflow on pull request events but only for the production branch
     pull_request:
-        branches: [do-production]
+        branches: [production]
         types: [closed]
 
     # Allows you to run this workflow manually from the Actions tab
