@@ -1,72 +1,39 @@
-<ngb-carousel #carousel pauseOnHover="true" pauseOnFocus="true" interval="10000">
-    <ng-template ngbSlide>
-        <div class="container-fluid brand-wrapper">
-            <div class="brand-wrapper__2 d-flex flex-column justify-content-between h-100 w-100">
-                <nav class="navbar">
-                    <a class="navbar-brand"><img src="assets/img/logo.png" height="40px" width="100px" alt="IFF Cargo"></a>
-                </nav>
-                <div class="row">
-                    <div class="col-12">
-                        <h1 class="text-center text-white carousel-heading">NEED RELIABLE AND FAST SHIPPING?</h1>
-                    </div>
-                    <div class="col-12">
-                        <h1 class="text-center text-white carousel-heading">WE GOT YOU COVERED</h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <img src="assets/img/aeroplane.png" alt="Aeroplane" class="animate-right" style="width: 100%;">
-                    </div>
-                </div>
+<div class="container-fluid d-flex flex-column justify-content-between brand-wrapper">
+    <nav class="navbar">
+        <a class="navbar-brand"><img src="assets/img/logo.png" height="40px" width="100px" alt="IFF Cargo"></a>
+    </nav>
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12">
+                <h1 class="text-center text-white carousel-heading">LARGE ENOUGH TO HANDLE,</h1>
+            </div>
+            <div class="col-12">
+                <h1 class="text-center text-white sub-heading carousel-heading">SMALL ENOUGH TO CARE</h1>
             </div>
         </div>
-    </ng-template>
-
-    <ng-template ngbSlide>
-        <div class="container-fluid d-flex flex-column justify-content-between brand-wrapper">
-            <nav class="navbar">
-                <a class="navbar-brand"><img src="assets/img/logo.png" height="40px" width="100px" alt="IFF Cargo"></a>
-            </nav>
-            <div class="container">
-                <div class="row mb-5">
-                    <div class="col-12">
-                        <h1 class="text-center text-white carousel-heading">LARGE ENOUGH TO HANDLE,</h1>
-                    </div>
-                    <div class="col-12">
-                        <h1 class="text-center text-white sub-heading carousel-heading">SMALL ENOUGH TO CARE</h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-3">
-                        <img src="assets/img/forklift.png" alt="ForkLift" class="animate-right" style="width: 100%;">
-                    </div>
-                    <div class="col-9">
-                        <img src="assets/img/truck.png" alt="Truck" class="animate-left" style="width: 100%;">
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col-3">
+                <img src="assets/img/forklift.png" alt="ForkLift" class="animate-right" style="width: 100%;">
+            </div>
+            <div class="col-9">
+                <img src="assets/img/truck.png" alt="Truck" class="animate-left" style="width: 100%;">
             </div>
         </div>
-    </ng-template>
+    </div>
+</div>
 
-
-    <ng-template ngbSlide>
-        <div class="container-fluid d-flex flex-column justify-content-between brand-wrapper">
-            <nav class="navbar">
-                <a class="navbar-brand"><img src="assets/img/logo.png" height="40px" width="100px" alt="IFF Cargo"></a>
-            </nav>
-            <div class="container">
-                <div class="row">
-                    <div class="col-6">
-                        <img src="assets/img/ship.png" alt="Ship" class="animate-right" style="width: 100%;">
-                    </div>
-                    <div class="col-6">
-
-                    </div>
-                </div>
-            </div>
+<section class="container my-5 trade-lookup">
+    <div class="row mb-5">
+        <div class="col">
+            <h1 class="text-center font-weight-light">GLOBAL TRADE LOOKUP</h1>
         </div>
-    </ng-template>
-</ngb-carousel>
+    </div>
+    <div class="row mb-2">
+        <div class="col">
+            <div style="height: 500px;" id="adamftd-embedded-container"></div>
+        </div>
+    </div>
+</section>
 
 <section class="container my-5 services">
     <div class="row mb-5">
